@@ -25,3 +25,10 @@
 
 (define (sqrt x)
   (sqrt-iter 1.0 x))
+
+;;; Exercise 1.3
+(define (sum-of-larger-two-squares x y z)
+  (cond ((and (> x z) (> y z)) (sum-of-squares x y))
+        ((and (> y x) (> z x)) (sum-of-squares y z))
+        (else (sum-of-squares x z))
+  ))
