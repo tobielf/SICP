@@ -32,3 +32,7 @@
         ((and (> y x) (> z x)) (sum-of-squares y z))
         (else (sum-of-squares x z))
   ))
+
+;;; Exercise 1.4
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))
