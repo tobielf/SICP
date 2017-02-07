@@ -54,3 +54,14 @@
 ;;; the value of the corresponding <e> WHENEVER all previous clauses have been
 ;;; bypassed. In fact, any expression that ALWAYS evaluates to a true value
 ;;; could be used as the <p> here.
+
+;;; Exercise 1.7
+(define (improved_good_enough guess x)
+  (< (abs (- (improve guess x) guess)) 0.00001)
+)
+
+(define (sqrt-iter guess x)
+  (if (improved_good_enough guess x)
+      guess
+      (sqrt-iter (improve guess x)
+                 x)))
