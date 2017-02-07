@@ -56,12 +56,25 @@
 ;;; could be used as the <p> here.
 
 ;;; Exercise 1.7
-(define (improved_good_enough guess x)
+(define (improved_good_enough guess x improve)
   (< (abs (- (improve guess x) guess)) 0.00001)
 )
 
 (define (sqrt-iter guess x)
-  (if (improved_good_enough guess x)
+  (if (improved_good_enough guess x improve)
       guess
       (sqrt-iter (improve guess x)
                  x)))
+
+;;; Exercise 1.8
+(define (cube-root-iter guess x)
+  (if (improved_good_enough guess x improve-cube)
+      guess
+      (cube-root-iter (improve-cube guess x)
+                 x)))
+
+(define (improve-cube guess x)
+  (/ (+ (/ x (square guess)) (* 2 guess)) 3))
+
+(define (cube-root x)
+  (cube-root-iter 1.0 x))
