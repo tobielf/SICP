@@ -22,6 +22,8 @@
 ;;; (A 1 10)=1024 (A 1 N) = 2 ^ N
 ;;; (A 2 4)=65536 (A 2 N) = 2 ^ (A 2 N-1), (A 2 1) = 2
 
+
+;;; Example fib.
 (define (fib n)
   (cond ((= n 0) 0)
         ((= n 1) 1)
@@ -36,6 +38,8 @@
       b
       (fib-iter (+ a b) a (- count 1))))
 
+
+;;; Example count-change
 (define (count-change amount)
   (cc amount 5))
 
@@ -77,3 +81,18 @@
         (else (+ (pascal-triangle (- r 1) (- c 1))
                  (pascal-triangle (- r 1) c)))))
 
+;;; Exercise 1.14
+;;; See Exercise-1-14.png
+;;; O(2^n),exponential
+
+;;; Exercise 1.15
+(define (cube x)
+  (* x x x))
+(define (p x)
+  (- (* 3 x) (* 4 (cube x))))
+(define (sine angle)
+  (if (not (> (abs angle) 0.1))
+      angle
+      (p (sine (/ angle 3.0)))))
+;;; a. 5 times
+;;; b. Theta(n)
