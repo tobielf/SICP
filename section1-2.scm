@@ -68,3 +68,12 @@
   (if (< count 3)
       a
       (f-ex11-iter (+ a (* 2 b) (* 3 c)) a b (- count 1))))
+
+;;; Exercise 1.12
+(define (pascal-triangle r c)
+  (cond ((> c r) 0)
+        ((= c 1) 1)
+        ((= r c) 1)
+        (else (+ (pascal-triangle (- r 1) (- c 1))
+                 (pascal-triangle (- r 1) c)))))
+
