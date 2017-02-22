@@ -53,3 +53,18 @@
         ((= kinds-of-coins 4) 25)
         ((= kinds-of-coins 5) 50)))
 
+;;; Exercise 1.11
+(define (f_ex11 n)
+  (cond ((< n 3) n)
+        ((>= n 3) (+ (f_ex11 (- n 1)) 
+                     (* 2 (f_ex11 (- n 2)))
+                     (* 3 (f_ex11 (- n 3)))))))
+
+(define (f-ex11 n)
+  (cond ((< n 3) n)
+        (else (f-ex11-iter 2 1 0 n))))
+
+(define (f-ex11-iter a b c count)
+  (if (< count 3)
+      a
+      (f-ex11-iter (+ a (* 2 b) (* 3 c)) a b (- count 1))))
