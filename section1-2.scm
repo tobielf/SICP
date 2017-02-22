@@ -96,3 +96,31 @@
       (p (sine (/ angle 3.0)))))
 ;;; a. 5 times
 ;;; b. Theta(n)
+
+
+;;; Example Exponentiation
+;;; Recursive version( O(n) time, O(n) space)
+(define (expt b n)
+  (if (= n 0)
+      1
+      (* b (expt b (- n 1)))))
+
+(define (expt-i b n)
+  (expt-iter b n 1))
+
+;;; Iterative version( O(n) time, O(1) space)
+(define (expt-iter b counter product)
+  (if (= counter 0)
+      product
+      (expt-iter b (- counter 1) (* b product))))
+
+;;; Divide and conquer version( O(logN) time, O(logN) space)
+(define (fast-expt b n)
+  (cond ((= n 0) 1)
+        ((even? n) (square (fast-expt b (/ n 2))))
+        (else (* b (fast-expt b (- n 1))))))
+
+(define (even? n)
+  (= (remainder n 2) 0))
+
+
