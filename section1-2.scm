@@ -145,3 +145,14 @@
         ((= b 1) a)
         ((even? b) (fast-mul (double a) (halve b)))
         (else (+ a (fast-mul a (- b 1))))))
+
+;;; Exercise 1.18
+(define (fast-mul-i a b)
+  (fast-mul-iter a b 0))
+
+(define (fast-mul-iter a b x)
+  (cond ((= b 0) x)
+        ((even? b) (fast-mul-iter (double a) (halve b) x))
+        (else (fast-mul-iter a (- b 1) (+ x a)))))
+
+
