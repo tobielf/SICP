@@ -1,3 +1,5 @@
+(load "basic")
+
 (define (sqrt x)
   (define (good-enough? guess)
   	(< (abs (- (square guess) x)) 0.001))
