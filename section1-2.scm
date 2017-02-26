@@ -133,6 +133,15 @@
         ((even? n) (fast-expt-iter (square b) a (/ n 2)))
         (else (fast-expt-iter b (* a b) (- n 1)))))
 
+;;; Exercise 1.17
+(define (double a)
+  (+ a a))
 
+(define (halve a)
+  (/ a 2))
 
-
+(define (fast-mul a b)
+  (cond ((= b 0) 0)
+        ((= b 1) a)
+        ((even? b) (fast-mul (double a) (halve b)))
+        (else (+ a (fast-mul a (- b 1))))))
