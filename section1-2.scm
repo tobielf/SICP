@@ -171,3 +171,27 @@
                              p
                              q
                              (- count 1)))))
+
+;;; Example Greatest Common Divisors
+(define (gcd a b)
+  (if (= b 0)
+      a
+      (gcd b (remainder a b))))
+
+;;; Exercise 1.20
+;;; 0. gcd 206 40
+;;; 1. gcd 40 (r 206 40)
+;;; 2. gcd (r 206 40) (r 40 (r 206 40))
+;;; 3. gcd (r 40 (r 206 40)) (r (r 206 40) (r 40 (r 206 40)))
+;;; 4. gcd (r (r 206 40) (r 40 (r 206 40))) (r (r 40 (r 206 40)) (r (r 206 40) (r 40 (r 206 40))))
+;;; 1-4, if (= b 0) called remainder 14 times, and step 4, called remainder 4 times.
+;;; called remainder 18 times in normal-order evaluation
+
+;;; 0. gcd 206 40
+;;; 1. gcd 40 6 (r 206 40)
+;;; 2. gcd 6 4 (r 40 6)
+;;; 3. gcd 4 2 (r 6 4)
+;;; 4. gcd 2 0 (r 4 2)
+;;; and 4 times in applicative-order evaluation
+
+
