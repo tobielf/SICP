@@ -243,7 +243,7 @@
   (start-prime-test n (runtime)))
 
 (define (start-prime-test n start-time)
-  (if (prime? n)
+  (if (fast-prime? n 4)
     (report-prime (- (runtime) start-time))
     #f))
 
@@ -267,5 +267,6 @@
 ; It is not twice fast as previous one, 
 ; probably due to function call and extra comparison
 
-
-
+;;; Exercise 1.24
+; Replaced with fast-prime it goes much faster
+; (More than 1000 times for 1,000,000,000)
