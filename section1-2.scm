@@ -270,3 +270,24 @@
 ;;; Exercise 1.24
 ; Replaced with fast-prime it goes much faster
 ; (More than 1000 times for 1,000,000,000)
+
+;;; Exercise 1.25
+(define (expmod-125 base exp m)
+  (remainder (fast-expt base exp) m))
+
+; it will works, but much slower.
+; Reasons:
+; The reduction steps in the cases where the exponent e is greater than 1 
+; are based on the fact that, for any integers x, y, and m, we can find 
+; the remainder of x times y modulo m by computing separately the 
+; remainders of x modulo m and y modulo m, multiplying these, and then 
+; taking the remainder of the result modulo m.
+; For instance, in the case where e is even, we compute the remainder of 
+; b e/2 modulo m, square this, and take the remainder modulo m. 
+; This technique is useful because it means we can perform our computation 
+; without ever having to deal with numbers much larger than m.
+
+
+
+
+
