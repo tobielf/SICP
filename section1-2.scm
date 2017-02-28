@@ -276,7 +276,7 @@
   (remainder (fast-expt base exp) m))
 
 ; it will works, but much slower.
-; Reasons:
+; Reasons(footnote 46):
 ; The reduction steps in the cases where the exponent e is greater than 1 
 ; are based on the fact that, for any integers x, y, and m, we can find 
 ; the remainder of x times y modulo m by computing separately the 
@@ -287,7 +287,16 @@
 ; This technique is useful because it means we can perform our computation 
 ; without ever having to deal with numbers much larger than m.
 
+;;; Exercise 1.26
+(define (expmod-126 base exp m)
+  (cond ((= exp 0) 1)
+        ((even? exp) (remainder (* (expmod-126 base (/ exp 2) m)
+                                   (expmod-126 base (/ exp 2) m)) 
+                                  m))
+        (else (remainder (* base (expmod-126 base (- exp 1) m)) 
+                          m))))
 
-
+; This expmod using explicit multiplication will transform the O(log n) process
+; into a O(n) process, because the same expmod-126 procedure have been called twice
 
 
