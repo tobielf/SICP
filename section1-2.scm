@@ -244,16 +244,28 @@
 
 (define (start-prime-test n start-time)
   (if (prime? n)
-    (report-prime (- (runtime) start-time))))
+    (report-prime (- (runtime) start-time))
+    #f))
 
 (define (report-prime elapsed-time)
   (display " *** ")
-  (display elapsed-time))
+  (display elapsed-time)
+  elapsed-time)
 
 (define (search-for-primes start end)
   (if (even? start)
       (search-for-primes (+ start 1) end)
       (cond ((< start end) (timed-prime-test start)
                            (search-for-primes (+ start 2) end)))))
+
+;;; Exercise 1.23
+(define (next test-divisor)
+  (if (= test-divisor 2)
+      3
+      (+ test-divisor 2)))
+
+; It is not twice fast as previous one, 
+; probably due to function call and extra comparison
+
 
 
