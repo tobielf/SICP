@@ -211,7 +211,7 @@
 
 ;;; Fermat test(Fermat's Little Theorem)
 ;;; Will be fooled by Carmichael numbers
-;;; e.g, 561, 1105, 1729, 2465, 2821, and 6601.
+;;; e.g, 561, 1105, 1729, 2465, 2821, and 6601. (Exercise 1.27)
 ;;; There are 255 Carmichael numbers out of 100,000,000.(very rare!)
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
@@ -298,5 +298,20 @@
 
 ; This expmod using explicit multiplication will transform the O(log n) process
 ; into a O(n) process, because the same expmod-126 procedure have been called twice
+
+;;; Exercise 1.27
+; Carmichael numbers: 561, 1105, 1729, 2465, 2821, and 6601.
+(define (carmichael-numbers? n)
+  (define (try-it a n)
+    (if (< a n)
+        (if (= (expmod a n n) a) 
+          (try-it (+ a 1) n)
+          #f)
+        #t))
+  (try-it 1 n)
+)
+
+
+
 
 
