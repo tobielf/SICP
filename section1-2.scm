@@ -213,6 +213,7 @@
 ;;; Will be fooled by Carmichael numbers
 ;;; e.g, 561, 1105, 1729, 2465, 2821, and 6601. (Exercise 1.27)
 ;;; There are 255 Carmichael numbers out of 100,000,000.(very rare!)
+;;; Miller-Robin test cannot be fooled by Carmichael numbers. (Exercise 1.28)
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
         ((even? exp) (remainder (square (expmod base (/ exp 2) m)) m))
@@ -311,7 +312,19 @@
   (try-it 1 n)
 )
 
+;;; Exercise 1.28
+(define (miller-robin-test n)
+  (define (try-it a)
+    (= (expmod-mr a (- n 1) n) 1))
+  (try-it (+ 1 (random (- n 1)))))
 
+(define (nontrivial-square-root a m)
+  (if (and (not (= a 1)) (not (= a (- m 1)))
+           (= (remainder (square a) m) 1))
+      0
+      (remainder (square a) m)))
 
-
-
+(define (expmod-mr base exp m)
+  (cond ((= exp 0) 1)
+        ((even? exp) (nontrivial-square-root (expmod-mr base (/ exp 2) m) m))
+        (else (remainder (* base (expmod-mr base (- exp 1) m)) m))))
