@@ -55,4 +55,11 @@
           (else (* (f (+ a (h-func k))) 4))))
   (* (h-func (/ 1 3)) (sum integral-term 1 inc n)))
 
+;;; Exercise 1.30
+(define (sum term a next b)
+  (define (iter a result)
+    (if (> a b)
+        result
+        (iter (next a) (+ result (term a)))))
+  (iter a 0))
 
