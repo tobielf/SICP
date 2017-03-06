@@ -63,3 +63,31 @@
         (iter (next a) (+ result (term a)))))
   (iter a 0))
 
+;;; Exercise 1.31
+;;; a. recursive method
+(define (product term a next b)
+  (if (> a b)
+      1
+      (* (term a) 
+         (product term (next a) next b))))
+
+(define (factorial n)
+  (product identity 1 inc n))
+
+(define (pi n)
+  (define (term a)
+    (if (= a 2)
+        2
+        (square a)))
+  (define (inc-by-two a)
+    (+ a 2))
+  (exact->inexact (/ (* 4 (/ (product term 2 inc-by-two n)
+       (product term 3 inc-by-two n))) n)))
+
+;;; b. iterative method
+(define (product term a next b)
+  (define (iter a result)
+    (if (> a b)
+        result
+        (iter (next a) (* result (term a)))))
+  (iter a 1))
