@@ -1,5 +1,8 @@
 (define (square x) (* x x))
 
+(define (cube x)
+  (* x x x))
+
 (define (sum-of-squares x y)
   (+ (square x) (square y)))
 
