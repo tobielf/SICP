@@ -1,4 +1,5 @@
 (load "basic")
+(load "section1-2")
 
 (define (sum-integers a b)
   (if (> a b)
@@ -113,3 +114,30 @@
         result
         (iter (next a) (combiner result (term a)))))
   (iter a null-value))
+
+;;; Exercise 1.33
+(define (filtered-accumulate combiner null-value term a next b filter)
+  (if (> a b)
+      null-value
+      (combiner (if (filter a)
+                    (term a)
+                    null-value) 
+                (filtered-accumulate combiner null-value term (next a) next b filter))))
+
+(define (sum-squares-prime a b)
+  (filtered-accumulate + 0 square a inc b prime?))
+
+(define (product-relatively-prime n)
+  (define (relatively-prime a)
+    (= (gcd a n) 1))
+  (filtered-accumulate * 1 identity 1 inc n relatively-prime))
+
+(define (filtered-accumulate combiner null-value term a next b filter)
+  (define (iter a result)
+    (if (> a b)
+        result
+        (iter (next a) (combiner result (if (filter a)
+            (term a)
+            null-value)))))
+  (iter a null-value))
+
