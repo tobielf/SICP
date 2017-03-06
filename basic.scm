@@ -11,6 +11,9 @@
       (- x)
       x))
 
+(define (even? n)
+  (= (remainder n 2) 0))
+
 (define (sqrt-iter guess x)
   (if (good-enough? guess x)
       guess

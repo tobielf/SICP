@@ -44,3 +44,15 @@
   (define (add-dx x)
     (+ x dx))
   (* (sum f (+ a (/ dx 2.0)) add-dx b) dx))
+
+;;; Exercise 1.29
+(define (integral-simpson f a b n)
+  (define (h-func k)
+    (* (/ (- b a) n) k))
+  (define (integral-term k)
+    (cond ((or (= k 0) (= k n)) (f (+ a (h-func k))))
+          ((even? k) (* (f (+ a (h-func k))) 2))
+          (else (* (f (+ a (h-func k))) 4))))
+  (* (h-func (/ 1 3)) (sum integral-term 1 inc n)))
+
+
