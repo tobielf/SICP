@@ -263,19 +263,27 @@
 
 ;;; Exercise 1.37
 (define (cont-frac n d k)
-  (if (> k 1)
-      (/ (n k) (+ (d k) (cont-frac n d (- k 1))))
-      (/ (n k) (d k))
-  ))
+  (define (frac i)
+    (if (< i k)
+        (/ (n i) (+ (d i) (frac (+ i 1))))
+        (/ (n i) (d i))))
+  (frac 1))
 
 (define (cont-frac n d k)
   (define (iter n d k result)
-    (if (> k 1)
+    (if (> k 0)
         (iter n d (- k 1) (/ (n k) (+ (d k) result)))
         result
         ))
-  (iter n d k (/ (n k) (d k))))
+  (iter n d (- k 1) (/ (n k) (d k))))
 
 (define (reciprocal-golden-ratio k)
   (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k))
 
+;;; Exercise 1.38
+(define (euler-expansion k)
+  (cont-frac (lambda (i) 1.0) 
+             (lambda (i) (if (= (remainder i 3) 2)
+                                (* 2.0 (+ (quotient i 3) 1))
+                                1.0)) 
+             k))
