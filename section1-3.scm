@@ -174,9 +174,19 @@
   (+ 1 (* x y))
   (- 1 y)))
 
+;;; using let syntax sugar
 (define (f x y)
   (let ((a (+ 1 (* x y)))
         (b (- 1 y)))
     (+ (* x (square a))
        (* y b)
        (* a b))))
+
+;;; Exercise 1.34
+(define (f g)
+  (g 2))
+
+;;; (f f) => (2 2), 2 is not a applicable object.
+;;; It's a applicative-order evaluation, it will using second f,
+;;; replace the g in first f, turns in to (f 2), which will finally
+;;; turn into (2 2).
