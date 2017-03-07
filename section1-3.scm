@@ -260,3 +260,22 @@
 
 (define (ex1-36-with)
   (fixed-point-e36 (lambda (x) (average x (/ (log 1000) (log x)))) 2.0))
+
+;;; Exercise 1.37
+(define (cont-frac n d k)
+  (if (> k 1)
+      (/ (n k) (+ (d k) (cont-frac n d (- k 1))))
+      (/ (n k) (d k))
+  ))
+
+(define (cont-frac n d k)
+  (define (iter n d k result)
+    (if (> k 1)
+        (iter n d (- k 1) (/ (n k) (+ (d k) result)))
+        result
+        ))
+  (iter n d k (/ (n k) (d k))))
+
+(define (reciprocal-golden-ratio k)
+  (cont-frac (lambda (i) 1.0) (lambda (i) 1.0) k))
+
