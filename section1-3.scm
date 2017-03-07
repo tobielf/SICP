@@ -240,5 +240,23 @@
 
 ;;; Exercise 1.35
 (define (golden-ratio)
-  (fixed-point (lambda (x) (+ 1 (/ 1 x))) 1.0))
+  (fixed-point (lambda (x) (average x (+ 1 (/ 1 x)))) 1.0))
 
+;;; Exercise 1.36
+(define (fixed-point-e36 f first-guess)
+  (define (close-enough? v1 v2)
+    (< (abs (- v1 v2)) tolerance))
+  (define (try guess)
+    (newline)
+    (display guess)
+    (let ((next (f guess)))
+      (if (close-enough? guess next)
+          next
+          (try next))))
+  (try first-guess))
+
+(define (ex1-36-without)
+  (fixed-point-e36 (lambda (x) (/ (log 1000) (log x))) 2.0))
+
+(define (ex1-36-with)
+  (fixed-point-e36 (lambda (x) (average x (/ (log 1000) (log x)))) 2.0))
