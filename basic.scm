@@ -1,5 +1,8 @@
 (define (square x) (* x x))
 
+(define (cube x)
+  (* x x x))
+
 (define (sum-of-squares x y)
   (+ (square x) (square y)))
 
@@ -7,6 +10,9 @@
   (if (< x 0)
       (- x)
       x))
+
+(define (even? n)
+  (= (remainder n 2) 0))
 
 (define (sqrt-iter guess x)
   (if (good-enough? guess x)
@@ -36,6 +42,17 @@
 ;;; Exercise 1.4
 (define (a-plus-abs-b a b)
   ((if (> b 0) + -) a b))
+
+;;; Exercise 1.5
+(define (p)
+  (p))
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+;;; (test 0 (p))
+;;; In normal-order evaluation, it will cause infinite loop
+;;; In applicative-order evaluation, it will get 0
 
 ;;; Exercise 1.6
 (define (new-if predicate then-clause else-clause)
