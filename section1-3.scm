@@ -213,3 +213,28 @@
             (search f b a))
           (else
             (error "Values are not of opposite sign" a b)))))
+
+;;; Example: finding fixed points of functions
+;;; average damping
+(define tolerance 0.00001)
+
+(define (fixed-point f first-guess)
+  (define (close-enough? v1 v2)
+    (< (abs (- v1 v2)) tolerance))
+  (define (try guess)
+    (let ((next (f guess)))
+      (if (close-enough? guess next)
+          next
+          (try next))))
+  (try first-guess))
+
+; oscillating one.
+;(define (sqrt x)
+;  (fixed-point (lambda (y) (/ x y)) 1.0))
+
+
+; notice that y = (1/2)(y + x/y) is a simple 
+; transformation of the equation y = x/y.
+(define (sqrt x)
+  (fixed-point (lambda (y) (average y (/ x y))) 1.0))
+
