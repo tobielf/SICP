@@ -354,3 +354,14 @@
 
 ;((compose square inc) 6)
 ; 49
+
+;;; Exercise 1.43
+(define (repeated f n)
+  (define (compose-iter i)
+    (if (= i n)
+        f
+        (compose f (compose-iter (+ i 1)))))
+  (compose-iter 1))
+
+;((repeated square 2) 5)
+; 625
