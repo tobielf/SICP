@@ -336,3 +336,7 @@
   (fixed-point-of-transform (lambda (y) (- (square y) x))
                             newton-transform
                             1.0))
+
+;;; Exercise 1.40
+(define (cubic a b c)
+  (lambda (x) (+ (cube x) (* a (square x) (* b x) c))))
