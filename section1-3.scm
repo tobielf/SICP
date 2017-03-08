@@ -307,8 +307,8 @@
                1.0))
 
 (define (cube-root x)
-  (fixed-point (average-damp (lambda (y) (/ x (square y)))
-               1.0)))
+  (fixed-point (average-damp (lambda (y) (/ x (square y))))
+               1.0))
 
 (define dx 0.00001)
 
@@ -387,3 +387,24 @@
 ; repeated 3 times average-damp, works until 15th-roots
 ; so repeat times = (floor (log2 n))
 
+;;; Exercise 1.46
+(define (iterative-improve good-enough? improve)
+  (define (improving guess)
+    (let ((next (improve guess)))
+    (if (good-enough? guess next)
+        next
+        (improving next))
+    ))
+  (lambda (first-guess) (improving first-guess)))
+
+(define (sqrt x)
+  (define (good-enough? guess next)
+    (< (abs (- next guess)) tolerance))
+  (define (improve guess)
+    (average guess (/ x guess)))
+  ((iterative-improve good-enough? improve) 1.0))
+
+(define (fixed-point f first-guess)
+  (define (close-enough? v1 v2)
+    (< (abs (- v1 v2)) tolerance))
+  ((iterative-improve close-enough? f) first-guess))
