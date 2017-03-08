@@ -340,3 +340,10 @@
 ;;; Exercise 1.40
 (define (cubic a b c)
   (lambda (x) (+ (cube x) (* a (square x) (* b x) c))))
+
+;;; Exercise 1.41
+(define (double f)
+  (lambda (x) (f (f x))))
+
+;(((double (double double)) inc) 5)
+; 21
