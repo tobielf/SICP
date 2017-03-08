@@ -372,3 +372,18 @@
 
 (define (n-fold-smooth n)
   (lambda (f) ((repeated smooth n) f)))
+
+;;; Exercise 1.45
+(define (log2 x)
+  (/ (log x) (log 2)))
+
+(define (nth-roots n)
+  (lambda (x) (fixed-point ((repeated average-damp (floor (log2 n)))
+                           (lambda (y) (/ x (expt y (- n 1)))))
+                           1.0)))
+
+; repeated 1 times average-damp, works until 3rd-roots
+; repeated 2 times average-damp, works until 7th-roots
+; repeated 3 times average-damp, works until 15th-roots
+; so repeat times = (floor (log2 n))
+
