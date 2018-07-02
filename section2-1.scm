@@ -61,3 +61,60 @@
         (cons (/ (abs n) g) (/ (abs d) g))
         (cons (/ (- (abs n)) g) (/ (abs d) g)))
     ))
+
+(define (make-rat n d)
+  (cons n d))
+
+(define (numer x)
+  (let ((g (gcd (car x) (cdr x))))
+    (/ (car x) g)))
+
+(define (denom x)
+  (let ((g (gcd (car x) (cdr x))))
+    (/ (cdr x) g)))
+
+;;; Constraining the dependence on the representation to a few interface 
+;;; procedures helps us design programs as well as modify them.
+
+;;; Exercise 2.2:
+(define (make-point x y)
+  (cons x y))
+
+(define (x-point p)
+  (car p))
+
+(define (y-point p)
+  (cdr p))
+
+(define (print-point p)
+  (newline)
+  (display "(")
+  (display (x-point p))
+  (display ",")
+  (display (y-point p))
+  (display ")"))
+
+(define (make-segment start end)
+  (cons start end))
+
+(define (start-segment segment)
+  (car segment))
+
+(define (end-segment segment)
+  (cdr segment))
+
+(define (midpoint-segment segment)
+  (let ((start (start-segment segment))
+        (end (end-segment segment)))
+    (make-point (/ (+ (x-point end) (x-point start)) 2) 
+                (/ (+ (y-point end) (y-point start)) 2)
+    )
+  )
+)
+
+
+
+
+
+
+
