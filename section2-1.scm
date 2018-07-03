@@ -112,6 +112,49 @@
   )
 )
 
+(define (segment-length segment)
+  (let ((start (start-segment segment))
+        (end (end-segment segment)))
+    (sqrt (+ (square (- (x-point start) (x-point end)))
+             (square (- (y-point start) (y-point end)))
+          )
+    )
+  )
+)
+
+;;; Exercise 2.3:
+;;; Rectangles (Width, Length)
+(define (make-rect width length)
+  (cons width length))
+
+(define (get-width rect)
+  (car rect))
+
+(define (get-length rect)
+  (cdr rect))
+
+(define (rectangle-perimeter rect)
+  (let ((width (get-width rect))
+        (length (get-length rect)))
+    (* (+ (segment-length width) (segment-length length)) 2)
+  )
+)
+
+(define (rectangle-area rect)
+  (let ((width (get-width rect))
+        (length (get-length rect)))
+    (* (segment-length width) (segment-length length))
+  )
+)
+
+
+
+
+
+
+
+
+
 
 
 
