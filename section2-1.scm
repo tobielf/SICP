@@ -147,10 +147,28 @@
   )
 )
 
+;;; Data as defined by some collection of selectors and constructors, 
+;;; together with specified conditions that these procedures must
+;;; fulfill in order to be a valid representation.
 
+;;; Powerful Pair Glue Everything together
+;;;
 
+;(define (cons x y)
+;  (define (dispatch m)
+;    (cond ((= m 0) x)
+;          ((= m 1) y)
+;          (else (error "Argument not 0 or 1 -- CONS" m))))
+;  dispatch
+;)
 
+;(define (car z)
+;  (z 0)
+;)
 
+;(define (cdr z)
+;  (z 1)
+;)
 
 
 
