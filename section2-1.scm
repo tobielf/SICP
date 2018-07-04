@@ -170,7 +170,21 @@
 ;  (z 1)
 ;)
 
+;;; The procedural representation, although obscure, is a perfectly adequate way
+;;; to represent pairs, since it fulfills the only conditions that pairs,
+;;; since it fulfills the only conditions that pairs need to fulfill.
+;;; The above example also demonstrates that the ability to manipulate procedures
+;;; as objects automatically provides the ability to represent compound data.
+;;; This style of programming is often called message passing.
 
+;;; Exercise 2.4:
+;;;
+(define (cons-ex x y)
+  (lambda (m) (m x y)))
+(define (car-ex z)
+  (z (lambda (p q) p)))
+(define (cdr-ex z)
+  (z (lambda (p q) q)))
 
 
 
