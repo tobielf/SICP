@@ -186,10 +186,27 @@
 (define (cdr-ex z)
   (z (lambda (p q) q)))
 
+;;; Exercise 2.5
+(define (cons-int a b)
+  (* (expt 2 a)
+     (expt 3 b)
+  )
+)
 
+; helper function to extract the index of given base (d)
+(define (n-divs n d)
+  (define (iter x count)
+    (if (= (remainder x d) 0)
+        (iter (/ x d) (+ count 1))
+        count))
+  (iter n 0)
+)
 
+(define (car-int z)
+  (n-divs z 2))
 
-
+(define (cdr-int z)
+  (n-divs z 3))
 
 
 
