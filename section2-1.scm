@@ -244,6 +244,16 @@
 (define (add-any m n)
   (lambda (f) (lambda (x) ((m f) ((n f) x)))))
 
+(define (inc-by-one n)
+  (+ n 1))
+
+; Test
+;1 ]=> ((one inc-by-one) 5)
+;Value: 6
+;1 ]=> ((two inc-by-one) 5)
+;Value: 7
+;1 ]=> (((add-any one two) inc-by-one) 5)
+;Value: 8
 
 
 
