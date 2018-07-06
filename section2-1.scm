@@ -208,5 +208,42 @@
 (define (cdr-int z)
   (n-divs z 3))
 
+;;; Exercise 2.6
+; lambda calculus.
+(define zero (lambda (f) (lambda (x) x)))
+
+(define (add-1 n)
+  (lambda (f) (lambda (x) (f ((n f) x)))))
+
+; Subsitute Zero to add-1, we will get
+; 1. (add-1 zero)
+; Expand add-1,
+; 2. (lambda (f) (lambda (x) (f ((zero f) x))))
+; Expand zero,
+; 3. (lambda (f) (lambda (x) (f (
+;                   (lambda (f) (lambda (x) x) f) 
+;                       x)
+;                   )
+;                 )
+;     )
+; Simplify zero with its lambda expression get evaluated
+; 4. (lambda (f) (lambda (x) (f (
+;                   (lambda (x) x) x) )
+;                )
+;    )
+; Simplify add-1 after we evaluated the ((lambda (x) x) x)
+; 5. (lambda (f) (lambda (x) (f x)))
+; So basically, zero apply f zero times on the data x.
+; one apply f once on the data x
+; two apply f twice on the data x
+
+(define one (lambda (f) (lambda (x) (f x))))
+(define two (lambda (f) (lambda (x) (f (f x)))))
+
+; Transform from add-1 we can get add-any.
+(define (add-any m n)
+  (lambda (f) (lambda (x) ((m f) ((n f) x)))))
+
+
 
 
