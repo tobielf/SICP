@@ -289,4 +289,20 @@
   (make-interval (- (lower-bound x) (upper-bound y))
                  (- (upper-bound x) (lower-bound y))))
 
+;;; Exercise 2.9
+;Prove the 'width' of combining two individual 'width' works for sum
+;Proof:
+;i1 = [a, b], i2 = [c, d]
+;w1 = b - a, w2 = d - c
+;w1+w2 = b - a + d - c
+;i3 = i1 + i2 = [a + c, b + d]
+;w3 = b + d - (a + c) = b + d - a - c
+
+;Prove the 'width' of combining two individual 'width' not works for mul
+;Proof by counter example
+;i1 = [2, 5], i2 = [10, 20]
+;w1 = 3, w2 = 10, w1 * w2 = 30
+;i3 = [20, 100]
+;w3 = 80
+
 
