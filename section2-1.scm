@@ -314,4 +314,42 @@
                 (make-interval (/ 1.0 (upper-bound y))
                                (/ 1.0 (lower-bound y))))))
 
+;;; Exercise 2.11
+; Break the mul-interval into nine cases.
+; [+, +] * [+, +]
+; [+, +] * [-, +]
+; [+, +] * [-, -]
+; [-, +] * [+, +]
+; [-, +] * [-, +]
+; [-, +] * [-, -]
+; [-, -] * [+, +]
+; [-, -] * [-, +]
+; [-, -] * [-, -]
+(define (mul-interval-ex x y)
+  (let ((x-lo (lower-bound x))
+        (x-up (upper-bound x))
+        (y-lo (lower-bound y))
+        (y-up (upper-bound y)))
+    (cond ((and (>= x-lo 0) (>= x-up 0) (>= y-lo 0) (>= y-up 0)) 
+              (make-interval (* x-lo y-lo) (* x-up y-up)))
+          ((and (>= x-lo 0) (>= x-up 0) (<= y-lo 0) (>= y-up 0))
+              (make-interval (* x-up y-lo) (* x-up y-up)))
+          ((and (>= x-lo 0) (>= x-up 0) (<= y-lo 0) (<= y-up 0))
+              (make-interval (* x-up y-lo) (* x-lo y-up)))
+
+          ((and (<= x-lo 0) (>= x-up 0) (>= y-lo 0) (>= y-up 0))
+              (make-interval (* x-lo y-up) (* x-up y-up)))
+          ((and (<= x-lo 0) (>= x-up 0) (<= y-lo 0) (>= y-up 0))
+              (make-interval (min (* x-lo y-lo) (* x-up y-up))
+                             (max (* x-lo y-lo) (* x-up y-up))))
+          ((and (<= x-lo 0) (>= x-up 0) (<= y-lo 0) (<= y-up 0))
+              (make-interval (* x-up y-lo) (* x-lo y-up)))
+
+          ((and (<= x-lo 0) (<= x-up 0) (>= y-lo 0) (>= y-up 0))
+              (make-interval (* x-lo y-up) (* x-up y-lo)))
+          ((and (<= x-lo 0) (<= x-up 0) (<= y-lo 0) (>= y-up 0))
+              (make-interval (* x-lo y-up) (* x-lo y-lo)))
+          ((and (<= x-lo 0) (<= x-up 0) (<= y-lo 0) (<= y-up 0))
+              (make-interval (* x-up y-up) (* x-lo y-lo)))
+        )))
 
