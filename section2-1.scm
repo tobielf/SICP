@@ -260,7 +260,7 @@
 (define (make-interval a b)
   (cons a b))
 
-(define (lower-bound y)
+(define (lower-bound x)
   (car x))
 
 (define (upper-bound x)
@@ -308,7 +308,7 @@
 ;;; Exercise 2.10
 ;
 (define (div-interval x y)
-  (if (>= (* (lower-bound y) (upper-bound y)) 0)
+  (if (>= 0 (* (lower-bound y) (upper-bound y)))
       (error "Error: the interval spanned 0." y)
       (mul-interval x 
                 (make-interval (/ 1.0 (upper-bound y))
