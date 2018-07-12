@@ -364,3 +364,15 @@
 (define (width i)
   (/ (- (upper-bound i) (lower-bound i)) 2))
 
+;;; Exercise 2.12
+; Reuse the current implementation, while adding new feature(representation).
+(define (make-center-percent center percent)
+  (let ((w (* center percent)))
+    (make-interval (- center w) (+ center w)))
+  )
+
+(define (percent i)
+  (let ((c (center i))
+        (w (width i)))
+    (/ w c)))
+
