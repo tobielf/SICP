@@ -1,0 +1,1612 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ro",
+				"root_mean_squared_error"
+			],
+			[
+				"pre",
+				"predicted"
+			],
+			[
+				"test",
+				"test_movie"
+			],
+			[
+				"movi",
+				"movieId"
+			],
+			[
+				"mo",
+				"movieId"
+			],
+			[
+				"pref",
+				"preferActor"
+			],
+			[
+				"prefer",
+				"preferGenre"
+			],
+			[
+				"genra",
+				"generate_rules"
+			],
+			[
+				"gus",
+				"g_user_rule"
+			],
+			[
+				"g",
+				"g_actor_rule"
+			],
+			[
+				"watchli",
+				"watchList"
+			],
+			[
+				"acto",
+				"actorId"
+			],
+			[
+				"movac",
+				"movieActor"
+			],
+			[
+				"wat",
+				"watchedList"
+			],
+			[
+				"gen",
+				"genresPerMovie"
+			],
+			[
+				"pr",
+				"preferGenre"
+			],
+			[
+				"m",
+				"movieGenre"
+			],
+			[
+				"rat",
+				"rating_info"
+			],
+			[
+				"ra",
+				"ratingDict"
+			],
+			[
+				"rati",
+				"ratingDict"
+			],
+			[
+				"r",
+				"rate"
+			],
+			[
+				"ratin",
+				"rating_info"
+			],
+			[
+				"mi",
+				"movieId"
+			],
+			[
+				"genr",
+				"genreSet"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"moi",
+				"movieId"
+			],
+			[
+				"si",
+				"sigma2"
+			],
+			[
+				"sigm",
+				"sigma2"
+			],
+			[
+				"u",
+				"u1"
+			],
+			[
+				"sig",
+				"sigma1"
+			],
+			[
+				"rea",
+				"read2"
+			],
+			[
+				"read",
+				"read1"
+			],
+			[
+				"lo",
+				"local2"
+			],
+			[
+				"valu",
+				"values"
+			],
+			[
+				"ba",
+				"balls"
+			],
+			[
+				"ha",
+				"hasBall"
+			],
+			[
+				"bal",
+				"balls"
+			],
+			[
+				"ball",
+				"ball1"
+			],
+			[
+				"R",
+				"Room1"
+			],
+			[
+				"ind",
+				"indirect_on"
+			],
+			[
+				"tra",
+				"training_y"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"di",
+				"distances"
+			],
+			[
+				"reg",
+				"regions_sum"
+			],
+			[
+				"re",
+				"regions_sum"
+			],
+			[
+				"lr",
+				"lr_accuracy"
+			],
+			[
+				"fra",
+				"fraction"
+			],
+			[
+				"gn",
+				"gnb_accumulated_accuracy"
+			],
+			[
+				"frac",
+				"fract_x"
+			],
+			[
+				"testing",
+				"testing_y"
+			],
+			[
+				"to",
+				"total1"
+			],
+			[
+				"clas",
+				"classes"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"l",
+				"longest_ordered_subsequence"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"ne",
+				"new_element"
+			],
+			[
+				"te",
+				"test_suite"
+			],
+			[
+				"new",
+				"new_y"
+			],
+			[
+				"direc",
+				"direction"
+			],
+			[
+				"dir",
+				"directions"
+			],
+			[
+				"moviei",
+				"movie_id"
+			],
+			[
+				"com",
+				"commands"
+			],
+			[
+				"task",
+				"task1b"
+			],
+			[
+				"co",
+				"commands"
+			],
+			[
+				"actor",
+				"actorid"
+			],
+			[
+				"tes",
+				"test_q1"
+			],
+			[
+				"an",
+				"ans_set"
+			],
+			[
+				"case",
+				"case_num"
+			],
+			[
+				"cas",
+				"case_num"
+			],
+			[
+				"sum",
+				"sum_from_left"
+			],
+			[
+				"ma",
+				"max_sub_arrary_crossing"
+			],
+			[
+				"cooki",
+				"cookies"
+			],
+			[
+				"vote",
+				"vote_url"
+			],
+			[
+				"def",
+				"def\tFunction"
+			],
+			[
+				"to_lin",
+				"to_link_node_data\tchar *"
+			],
+			[
+				"expr1",
+				"expr1_data\tchar *"
+			],
+			[
+				"bo",
+				"boolean_value"
+			],
+			[
+				"ter",
+				"terms_data\tchar *"
+			],
+			[
+				"factordata",
+				"factor_data\tchar *"
+			],
+			[
+				"oper",
+				"operand_data\tchar *"
+			],
+			[
+				"expr2",
+				"expr2_data\tchar *"
+			],
+			[
+				"loop",
+				"loop_length\tint"
+			],
+			[
+				"node",
+				"node2\tparsing_tree_st *"
+			],
+			[
+				"nod",
+				"node2\tparsing_tree_st *"
+			],
+			[
+				"pargetsibling",
+				"parsing_tree_get_sibling(parsing_tree_st *)\tparsing_tree_st *"
+			],
+			[
+				"if_end",
+				"if_end_label\tchar *"
+			],
+			[
+				"err",
+				"error_msg(int, char *)\tvoid"
+			],
+			[
+				"arg",
+				"argv\tchar *[]"
+			],
+			[
+				"thennod",
+				"then_tree_node\tparsing_tree_st *"
+			],
+			[
+				"NU",
+				"NUMBER\tenum type"
+			],
+			[
+				"type",
+				"type_index\tint"
+			],
+			[
+				"exp",
+				"expected"
+			],
+			[
+				"parsetsib",
+				"parsing_tree_set_sibling(parsing_tree_st *, parsing_tree_st *)\tparsing_tree_st *"
+			],
+			[
+				"pargetchil",
+				"parsing_tree_get_child(parsing_tree_st *tree_root)\tparsing_tree_st *"
+			],
+			[
+				"parsgetchil",
+				"parsing_tree_get_child(parsing_tree_st *tree_root)\tparsing_tree_st *"
+			],
+			[
+				"toke",
+				"token_length\tint"
+			],
+			[
+				"token",
+				"token_length\tint"
+			],
+			[
+				"token_bu",
+				"token_buff\tchar *"
+			],
+			[
+				"token_buff",
+				"token_buff_size\tint"
+			],
+			[
+				"errn",
+				"error_errno(int)\tvoid"
+			],
+			[
+				"UT",
+				"UTILS_OBJ"
+			],
+			[
+				"UTLS",
+				"UTILS_SRC"
+			],
+			[
+				"bytecodenw",
+				"byte_code_new(char *, char *, char *)\tchar *"
+			],
+			[
+				"termdat",
+				"term_data\tchar *"
+			],
+			[
+				"bytenew",
+				"byte_code_new(char *, char *, char *)\tchar *"
+			],
+			[
+				"bytnew",
+				"byte_code_new(char *, char *, char *)\tchar *"
+			],
+			[
+				"byte",
+				"bytecode\tchar *"
+			],
+			[
+				"byt",
+				"bytecode\tchar *"
+			],
+			[
+				"byteco",
+				"bytecode\tchar *"
+			],
+			[
+				"byte_code_",
+				"byte_code_new(char *, char *, char *)\tchar *"
+			],
+			[
+				"bytec",
+				"bytecode\tchar *"
+			],
+			[
+				"term",
+				"term_data\tchar *"
+			],
+			[
+				"parstesib",
+				"parsing_tree_set_sibling(parsing_tree_st *, parsing_tree_st *)\tparsing_tree_st *"
+			],
+			[
+				"smtr",
+				"stmt_tree\tparsing_tree_st *"
+			],
+			[
+				"parsetchil",
+				"parsing_tree_set_child(parsing_tree_st *, parsing_tree_st *)\tparsing_tree_st *"
+			],
+			[
+				"addr",
+				"address"
+			],
+			[
+				"instru",
+				"instructions\tinstruction_set_st *"
+			],
+			[
+				"machin",
+				"machine_store\tmachine_memory_st *"
+			],
+			[
+				"for",
+				"for1_end"
+			],
+			[
+				"MCUr",
+				"MEMORY_CURRENT_SCOPE\tmacro"
+			],
+			[
+				"sta",
+				"static_memory\tmemory_st *"
+			],
+			[
+				"machi",
+				"machine_store\tmachine_memory_st *"
+			],
+			[
+				"labes",
+				"labels\tlabel_table_st *"
+			],
+			[
+				"label",
+				"label_table_st\ttypedef"
+			],
+			[
+				"labe",
+				"label_st\ttypedef"
+			],
+			[
+				"instrsetfl",
+				"instruction_set_set_flag(instruction_set_st *, int)\tvoid"
+			],
+			[
+				"s_s",
+				"s_scope_boundary\tint *"
+			],
+			[
+				"intr",
+				"instructions\tinstruction_set_st *"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/facts.py",
+			"settings":
+			{
+				"buffer_size": 11756,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/interpret.py",
+			"settings":
+			{
+				"buffer_size": 2940,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/run.sh",
+			"settings":
+			{
+				"buffer_size": 65542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/t.lp",
+			"settings":
+			{
+				"buffer_size": 402,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/facts.db",
+			"settings":
+			{
+				"buffer_size": 3991002,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python3.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 239.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sspr",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"sspro",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"ss",
+				"Set Syntax: Haskell"
+			],
+			[
+				"sslisp",
+				"Set Syntax: Lisp"
+			],
+			[
+				"sssch",
+				"Set Syntax: Scheme"
+			],
+			[
+				"sshask",
+				"Set Syntax: Haskell"
+			],
+			[
+				"sssw",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"ssprol",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"pcin",
+				"Package Control: Install Package"
+			],
+			[
+				"set prol",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"set a",
+				"Set Syntax: ASP"
+			],
+			[
+				"ss answ",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"ssa",
+				"Set Syntax: ASP"
+			],
+			[
+				"pclis",
+				"Package Control: List Packages"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"copylin",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"cop",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copye",
+				"Preferences: Copy With Line Numbers Settings - User"
+			],
+			[
+				"copy",
+				"Preferences: Copy With Line Numbers Settings - Default"
+			],
+			[
+				"packins",
+				"Package Control: Install Package"
+			],
+			[
+				"pacontroins",
+				"Package Control: Install Package"
+			],
+			[
+				"setsy javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssjava",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set synpy",
+				"Set Syntax: Python"
+			],
+			[
+				"ssjas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sssc",
+				"Set Syntax: Scheme"
+			],
+			[
+				"copynu",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copnum",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"ssprolo",
+				"Set Syntax: SWI-Prolog"
+			],
+			[
+				"ssmd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"sublime settin",
+				"Preferences: SublimeClang Settings – Default"
+			],
+			[
+				"clan",
+				"Preferences: SublimeClang Settings – Default"
+			],
+			[
+				"clang",
+				"Preferences: SublimeClang Settings – Default"
+			],
+			[
+				"clang re",
+				"SublimeClang: Clear cache"
+			],
+			[
+				"clang setting",
+				"Preferences: SublimeClang Settings – Default"
+			],
+			[
+				"pcins",
+				"Package Control: Install Package"
+			],
+			[
+				"packecen",
+				"Package Control: Enable Package"
+			],
+			[
+				"gitgutter",
+				"Preferences: GitGutter Settings - Default"
+			],
+			[
+				"package c list",
+				"Package Control: List Packages"
+			],
+			[
+				"installp",
+				"Package Control: Install Package"
+			],
+			[
+				"ssscm",
+				"Set Syntax: Scheme"
+			],
+			[
+				"copywi",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"ss pe",
+				"Set Syntax: Perl"
+			],
+			[
+				"sslog",
+				"Set Syntax: LaTeX Log"
+			],
+			[
+				"copy lin",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copy wil",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copy with li",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copy withl",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copy witl",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copwi",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"coy",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"forma",
+				"Tag: Auto-Format Tags on Selection"
+			],
+			[
+				"copy with",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"edi",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"copywith",
+				"Preferences: Copy With Line Numbers Settings - User"
+			],
+			[
+				"packcon",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"edit",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"ed",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"Edit",
+				"Edit: Copy With Line Numbers"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ssmip",
+				"Set Syntax: MIPS"
+			],
+			[
+				"mip",
+				"Set Syntax: MIPS"
+			],
+			[
+				"pins",
+				"Package Control: Install Package"
+			],
+			[
+				"sspyt",
+				"Set Syntax: Python"
+			],
+			[
+				"sssche",
+				"Set Syntax: Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ss lisp",
+				"Set Syntax: Lisp"
+			],
+			[
+				"sspython",
+				"Set Syntax: Python"
+			],
+			[
+				"ssc++",
+				"Set Syntax: C++"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc+",
+				"Set Syntax: C++"
+			],
+			[
+				"sspyth",
+				"Set Syntax: Python"
+			],
+			[
+				"sshtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssjavas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"s s p y",
+				"Set Syntax: Python"
+			],
+			[
+				"ssphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"packconi",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Preferences: Browse Packages"
+			],
+			[
+				"s s java",
+				"Set Syntax: Java"
+			],
+			[
+				"setsyc",
+				"Set Syntax: C"
+			],
+			[
+				"pcli",
+				"Package Control: List Packages"
+			],
+			[
+				"s s",
+				"Set Syntax: C"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"p c",
+				"Package Control: Install Package"
+			],
+			[
+				"s s j a v a",
+				"Set Syntax: Java"
+			],
+			[
+				"s s j a a",
+				"Set Syntax: Java"
+			],
+			[
+				"sssql",
+				"Set Syntax: SQL"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"ssshel",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 452.0
+	},
+	"console":
+	{
+		"height": 288.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/result"
+	],
+	"file_history":
+	[
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/3.lp",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/test.csv",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/result/3.out",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/run.sh",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/ml-latest-small/ratings.csv",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/ml-latest-small/movies.csv",
+		"/Users/tobielf/Documents/GitHub/CSE569-Fall2017/Code/measurement.py",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/facts.db",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/result/1.out",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/1.lp",
+		"/Users/tobielf/Documents/GitHub/CSE569-Fall2017/Code/step0.py",
+		"/Users/tobielf/Documents/GitHub/CSE569-Fall2017/Code/main.py",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/ml-latest-small/tags.csv",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/10.lp",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/rubric.txt",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/102.lp",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/LaTeX/chapters/chapter1.tex",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/LaTeX/chapters/chapter2.tex",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/LaTeX/chapters/chapter3.tex",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/LaTeX/chapters/chapter4.tex",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/80005.lp",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/result/80005.out",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/LaTeX/Report.tex",
+		"/Users/tobielf/Documents/ASU/CSE575/Project/CSE575-Spring18/Docs/Report/finalreport.tex",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/result/80034.out",
+		"/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/users/80034.lp",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team21/src/testcases/whileloop.gvm",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team21/src/testcases/operators_testing.gvm",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team21/src/testcases/ifelse.gvm",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team21/src/testcases/basic.gvm",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team21/README.md",
+		"/Users/tobielf/Downloads/assign3.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-27-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team12-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/compiler/FishLanguageBaseListener.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/RelationalOperations.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/ArithmeticOperations.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/TypeChecking.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/Pair.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/LogicalOperations.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/FishRunTimeMain.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/runtime/FishRunTime.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/compiler/FishMain.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/compiler/FishLanguageListener.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team16-master/src/compiler/FishLanguageLexer.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team12-master/src/compiler/parsetreegen.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team12-master/src/runtime/interpreter.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-27-master/data/factorial.cbl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-32-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team3-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/src/tokenizer.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team10-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team15-master/README.md",
+		"/Users/tobielf/Documents/ASU/MasterDegree/Finished Courses/SER502/Assignment/Assignment2/assign2_xguo73.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/test.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 4.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/grammar/Grammar in BNF format",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-27-master/install.sh",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team25-master/data/arithmetic.rc",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team25-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team28-master_2/sample3function.as",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team28-master_2/sample2if_else.as",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team28-master_2/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team18/src/compiler/Team18.pl",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team18/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team18/data/Test1.hbsm",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team18/doc/Grammar.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER-502-Spring-2018-Team29-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER-502-Spring-2018-Team29-master/resources/test/nested_loop.ez",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER-502-Spring-2018-Team29-master/resources/test/expression.ez",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 6.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 1.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 5.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 7.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 8.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team30-master/examples/Input_Files/Input 9.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team31/grammar/Example4.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team31/grammar/Example.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team31/grammar/Example2.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team31/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team31/src/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/src/data/fibonacci.race",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/src/data/arithmeticExpression.race",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/src/data/whileExpression.race",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/src/data/forExpression.race",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team23-master/src/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team14-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/data/fibonacci_parseTree.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/data/gcd.ocelot",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/data/fibonacci.ocelot",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team13-master/data/mathfunctions.ocelot",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team12-master/doc/contribution.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/compile 2/compiler/BESTLexer.class",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/compile 2/compiler/IntermediateCodeGenerator.class",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src/compiler/BESTListener.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src/runtime/BestRuntime.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src/compiler/BESTParser.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src/compiler/IntermediateCodeGenerator.java",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src/compiler/Grading.BEST",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-11-master/data/Case1/testCase1.ahj",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-11-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-11-master/src/ahj.sh",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team10-master/data/factorial.nirv",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team10-master/data/factorial.nirc",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team9-master/src/compiler/gmr.g4",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team9-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team9-master/data/If-else.dvlz",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team9-master/data/factorial.dvlz",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team9-master/src/compiler/gmr.interp",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team8-master/Stark/data/stark_programs/assign.ark",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team8-master/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team8-master/Stark/data/stark_programs/arithmetical-operator.ark",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/data/if_else_example.eps",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/data/fibonachhi_iterative.eps",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/data/euclidean_algorithm_mod_recursive.eps",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/t.sh",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team-32-master/test.txt",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/t.eps",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team7-master/run.sh",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team33-master-2/README.md",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team33-master-2/Perx.g4",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team33-master-2/data/sampleprogram/whilestatement.perx",
+		"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/SER502-Spring2018-Team33-master-2/doc/contribution.txt"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"/Users/tobielf/Downloads/gradebook_2018Spring-P-SER502-15889_Final20Project20Submission2028Milestone20329_2018-05-05-11-10-30/Final Project Submission (Milestone 3)_Team 20_attempt_2018-04-29-04-46-52_SER502-Spring2018-Team20-master/SER502-Spring2018-Team20-master/src",
+			"/Users/tobielf/Documents/GitHub/raspberrypi_project/SemesterProject",
+			"<project>",
+			"/Users/tobielf/Documents/GitHub/raspberrypi_project/SemesterProject/src/httpd.c",
+			"/Users/tobielf/Documents/GitHub/raspberrypi_project/SemesterProject/src/test.c",
+			"/Users/tobielf/Documents/GitHub/raspberrypi_project/Assignment5/spi.c",
+			"/Users/tobielf/Documents/ASU/SER486/Pi",
+			"<open files>",
+			"",
+			"/Users/tobielf/Documents/ASU/SER502/Assignment/Assignment2",
+			"/Users/tobielf/Documents/ASU/SER502/Assignment/Assign",
+			"/Users/tobielf/Documents/ASU/SER502/Assignment/Assignment2",
+			"/Users/tobielf/Documents/ASU/SER502/Assignment",
+			"<project>",
+			"/Users/tobielf/Documents/ASU/SER486/Pi/examples/push-button.c",
+			"",
+			"/Users/tobielf/Documents/GitHub/JGraphDemo/JGraphDemo/src/com/mxgraph/examples",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"predicted_rate_per_user",
+			"extract_genre_preference",
+			"extract_watch_history",
+			"extract_genre_preference",
+			"result",
+			"Genre",
+			"hasRate",
+			"g_genre_rule",
+			"genreSet",
+			"Episode VI - Return of the Jedi (1983)",
+			"hasGenre",
+			"genreList",
+			"hasGenre",
+			"extract_genre_info",
+			"movie_info",
+			"extract_genre_info",
+			"hasGenre",
+			"^3,",
+			"3,",
+			"wb",
+			"Set(",
+			"Set(m",
+			"Set(",
+			"Set()",
+			"Set",
+			"training_testing_split",
+			"users",
+			"train_test_split",
+			"rating_info",
+			"extract_watch_history",
+			"tag_info",
+			"extract_watch_history",
+			", 778)",
+			", 593)",
+			"3, 588",
+			"3， 588",
+			"595)",
+			", 595)",
+			"110)",
+			"function",
+			"eaxRegister",
+			"eipRegister",
+			"eipregister",
+			"eipRegister",
+			"eipregister",
+			"eipRegister",
+			"eaxRegister",
+			"python",
+			"not",
+			"program",
+			"interpreter",
+			"re_match",
+			"50",
+			"if",
+			"function",
+			"funct",
+			"-",
+			"boolean_expression",
+			"boolean_value",
+			"boolean",
+			"T",
+			"true",
+			"bool",
+			"true",
+			"Raghavendra",
+			"evalExpression",
+			"evalOutlist",
+			"print",
+			"function_call",
+			"data_types",
+			"return_types",
+			"function",
+			"ant",
+			"for_statement",
+			"list_expression",
+			"int_list",
+			"list",
+			"LIST",
+			"list_type",
+			"similarly",
+			"Similarly",
+			"similarly",
+			"simila",
+			"declarative",
+			"3,",
+			"figure",
+			"rules",
+			"Likelihood:  1.0, ",
+			"Movie: ",
+			"horror",
+			"consider",
+			"LPMLN",
+			"Leaves of Grass (2009)",
+			"In Bruges (2008)",
+			"Seven-Per-Cent Solution, The (1976)",
+			"Ichi the Killer (Koroshiya 1) (2001)",
+			"Rubber (2010)",
+			"Nurse Betty (2000)",
+			"Out of Sight (1998) ",
+			"Osmosis Jones (2001)",
+			"Motorama (1991)",
+			"Motorama (1991) ",
+			"To Have and Have Not (1944)",
+			"All Dogs Go to Heaven 2 (1996)",
+			"Return of Jafar, The (1994)",
+			"The Slipper and the Rose: The Story of Cinderella (1976)",
+			"Kid in King Arthur's Court, A (1995)",
+			"Shrek (2001)",
+			"Enchanted (2007)",
+			"Gnomeo",
+			"Valiant (2005)",
+			"Island of Dr. Moreau, The (1977)",
+			"Movie: ",
+			"Genres: .*$",
+			"Genres",
+			"Braveheart",
+			"110,",
+			"593,",
+			"movie_info",
+			"280",
+			"2280",
+			"literalDict",
+			"normalizedExpr",
+			"print",
+			"conf",
+			"prg",
+			"clingo",
+			"sympy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    ",
+			"  ",
+			",",
+			"    ",
+			"\t",
+			"\\\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/facts.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11039,
+								11039
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3371.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/interpret.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2647,
+								2647
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/run.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 65542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/t.lp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/tobielf/Documents/ASU/CSE579/CSE579-Spring18/Project/facts.db",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3991002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								512817,
+								512824
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 432528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GoSublime-main-output":
+	{
+		"height": 118.0
+	},
+	"output.GoSublime-source-output":
+	{
+		"height": 118.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 118.0
+	},
+	"output.clang":
+	{
+		"height": 178.0
+	},
+	"output.exec":
+	{
+		"height": 190.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "SICP.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"parser.c",
+				"ASU-SER502/example/parser.c"
+			],
+			[
+				"wiringpispi.h",
+				"Pi/wiringPi/wiringPiSPI.h"
+			],
+			[
+				"",
+				"Assignment/Assignment1/Code/goldbach.pl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 322.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
