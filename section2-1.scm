@@ -376,3 +376,22 @@
         (w (width i)))
     (/ w c)))
 
+;;; Exercise 2.13
+(define (par1 r1 r2)
+  (div-interval (mul-interval r1 r2) (add-interval r1 r2)))
+
+(define (par2 r1 r2)
+  (let ((one (make-interval 1 1)))
+    (div-interval one (add-interval (div-interval one r1) (div-interval one r2)))))
+
+;;; Exercise 2.14
+
+; Invistigate the problem from above formulas.
+
+;;; Exercise 2.15
+
+; 
+
+;;; Exercise 2.16
+
+;
