@@ -385,8 +385,28 @@
     (div-interval one (add-interval (div-interval one r1) (div-interval one r2)))))
 
 ;;; Exercise 2.14
-
 ; Invistigate the problem from above formulas.
+; Moriturus te saluto. [Scheme 9.2 2014]
+; Pulvis et umbra sumus. [Scheme 10.1.0 2019]
+; I tried [3, 4) and [5, 6)
+(define int214-1 (make-interval 3 4))
+(define int214-2 (make-interval 5 6))
+(par1 int214-1 int214-2)
+;Value: (1.5 . 3.)
+(par2 int214-1 int214-2)
+;Value: (1.875 . 2.4000000000000004)
+; The reason behind the problem is the numeric division we used in computer
+; actually is an approximation of Real number.
+; 1/3*3 = 1, if this is a symbolic computation, however, when it comes to
+; numeric computation 1/3*3 != 1. Since 1/3 = 0.3333333 (depends on the resolution)
+; 0.3333333 * 3 = 0.999999.
+; From the theory of computaion pespective, the ability of the computer has
+; certain limitation, e.g, it can only computes on countable set (N),
+; for uncountable set like (R), we are using some resolution to "trim" the real
+; number.
+; Overall, par2 using the division three times, makes the problem getting worse.
+; So, I think the best practise should reduce the number of divisions in any
+; programming languages! Simplify the formula first.
 
 ;;; Exercise 2.15
 
