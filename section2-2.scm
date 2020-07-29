@@ -62,3 +62,29 @@
             (cc (- amount 
                    (first-denomination coin-values)) 
                 coin-values)))))
+
+;;; Does the order of the list coin-values affect the answer produced by cc?
+;;; No, it doesn't affect. Because the way we are searching will cover all combinations.
+
+;;; Exercise 2.20
+(define (same-parity target . rest)
+  (define (same? item)
+    (if (= (remainder target 2) (remainder item 2))
+        (list item)
+        (list)))
+  (define (same-parity-recurse items)
+    (if (null? items)
+        items
+        (append (same? (car items)) (same-parity-recurse (cdr items))) ))
+  (append (list target) (same-parity-recurse rest)))
+
+(define (same-parity target . rest)
+  (define (same? item ans)
+    (if (= (remainder target 2) (remainder item 2))
+        (append ans (list item))
+        ans))
+  (define (same-parity-iter items ans)
+    (if (null? items)
+        ans
+        (same-parity-iter (cdr items) (same? (car items) ans))))
+  (same-parity-iter rest (list target)))
