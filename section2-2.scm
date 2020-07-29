@@ -28,3 +28,9 @@
   (if (null? list1)
       list2
       (cons (car list1) (append (cdr list1) list2))))
+
+;;; Exercise 2.17
+(define (last-pair items)
+  (if (null? (cdr items))
+      (car items)
+      (last-pair (cdr items))))
