@@ -23,3 +23,8 @@
         (length-iter (cdr a) (+ 1 count))))
   (length-iter items 0)
 )
+
+(define (append list1 list2)
+  (if (null? list1)
+      list2
+      (cons (car list1) (append (cdr list1) list2))))
