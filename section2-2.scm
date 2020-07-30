@@ -115,5 +115,9 @@
 (define (square-list items)
   (map (lambda (x) (* x x)) items))
 
+(define (square-list items)
+  (map square items))
+
+
 
 
