@@ -88,3 +88,24 @@
         ans
         (same-parity-iter (cdr items) (same? (car items) ans))))
   (same-parity-iter rest (list target)))
+
+(define (scale-list items factor)
+  (if (null? items)
+      items
+      (cons (* (car items) factor)
+            (scale-list (cdr items) factor))))
+
+(define (map proc items)
+  (if (null? items)
+      items
+      (cons (proc (car items))
+            (map proc (cdr items)))))
+
+(define (scale-list items factor)
+  (map (lambda (x) (* x factor))
+       items))
+
+
+
+
+
