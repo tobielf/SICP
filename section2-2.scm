@@ -118,6 +118,37 @@
 (define (square-list items)
   (map square items))
 
+;;; Exercise 2.22
+;(define (square-list items)
+;  (define (iter things answer)
+;    (if (null? things)
+;        answer
+;        (iter (cdr things)
+;              (cons (square (car things))
+;                    answer))))
+;  (iter items (list)))
 
+;;; here cons append the previous answer after the new answer, so we will get
+;;; a reversed order answer.
 
+;(define (square-list items)
+;  (define (iter things answer)
+;    (if (null? things)
+;        answer
+;        (iter (cdr things)
+;              (cons answer (square (car things))
+;                    ))))
+;  (iter items (list)))
 
+;;; cons creates a closure (pairs) of two elements so the answer will be a list of lists
+;;; (((((() . 1) . 4) . 9) . 16) . 25)
+;;; We need to reverse the order and use append to glue two lists to one.
+
+(define (square-list items)
+  (define (iter things answer)
+    (if (null? things)
+        answer
+        (iter (cdr things)
+              (append answer (list (square (car things)))
+                    ))))
+  (iter items (list)))
