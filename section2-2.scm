@@ -200,7 +200,7 @@
 
 ;(define (deep-reverse items)
 ;  (cond ((null? items) items)
-;        ((not (pair? items)) items)
+;        ((not (pair? items)) (list items))
 ;        (else (append (deep-reverse (cdr items)) (deep-reverse (car items))))))
 ;Value: (4 3 2 1)
 
@@ -212,3 +212,16 @@
                   (list (deep-reverse (car items)))
                   (list (car items))))))
 ;Value: ((4 3) (2 1))
+
+
+;;; Exercise 2.28
+(define (fringe root)
+  (cond ((null? root) root)
+        ((not (pair? root)) (list root))
+        (else (append (fringe (car root)) (fringe (cdr root))))))
+
+
+
+
+
+
