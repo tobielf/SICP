@@ -194,6 +194,21 @@
 (list x y)
 ;Value: ((1 2 3) (4 5 6))
 
+;;; Exercise 2.27
+(define x (list (list 1 2) (list 3 4)))
+;Value: ((1 2) (3 4))
 
+;(define (deep-reverse items)
+;  (cond ((null? items) items)
+;        ((not (pair? items)) items)
+;        (else (append (deep-reverse (cdr items)) (deep-reverse (car items))))))
+;Value: (4 3 2 1)
 
-
+(define (deep-reverse items)
+  (if (null? items)
+      items
+      (append (deep-reverse (cdr items)) 
+              (if (pair? (car items))
+                  (list (deep-reverse (car items)))
+                  (list (car items))))))
+;Value: ((4 3) (2 1))
