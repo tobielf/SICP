@@ -348,3 +348,11 @@
          (list 3 4) 5)
          (list 6 7)))
 
+;;; Exercise 2.32
+
+(define (subsets s)
+  (if (null? s)
+      (list `())
+      (let ((rest (subsets (cdr s))))
+        (append rest (map (lambda (sub-set) (cons (car s) sub-set)) rest)))))
+
