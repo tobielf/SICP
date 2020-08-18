@@ -221,7 +221,72 @@
         (else (append (fringe (car root)) (fringe (cdr root))))))
 
 
+;;; Exercise 2.29
+(define (make-mobile left right)
+  (list left right))
+
+(define (make-branch length structure)
+  (list length structure))
+
+;;; 2.29 a
+(define (left-branch mobile)
+  (car mobile))
+
+(define (right-branch mobile)
+  (car (cdr mobile)))
+
+(define (branch-length branch)
+  (car branch))
+
+(define (branch-structure branch)
+  (car (cdr branch)))
+
+;;; 2.29 b
+(define (total-weight mobile)
+  (define (branch-weight branch)
+      (if (pair? (branch-structure branch))
+          (total-weight (branch-structure branch))
+          (branch-structure branch)))
+  (+ (branch-weight (left-branch mobile)) 
+     (branch-weight (right-branch mobile))
+  ))
+
+;;; 2.29 c
+(define (branch-weight branch)
+  (if (pair? (branch-structure branch))
+      (total-weight (branch-structure branch))
+      (branch-structure branch)))
+
+(define (balanced mobile)
+  (if (not (pair? mobile))
+      #t
+      (and (= (* (branch-length (left-branch mobile))
+                 (branch-weight (left-branch mobile)))
+              (* (branch-length (right-branch mobile))
+                 (branch-weight (right-branch mobile))))
+           (balanced (branch-structure (left-branch mobile)))
+           (balanced (branch-structure (right-branch mobile)))
+      )
+  ))
 
 
+;;; 2.29 d
+; Change the definition, we only need to change the selector.
+(define (make-mobile left right)
+  (cons left right))
 
+(define (make-branch length structure)
+  (cons length structure))
+
+(define (left-branch mobile)
+  (car mobile))
+
+(define (right-branch mobile)
+  (cdr mobile))
+
+(define (branch-length branch)
+  (car branch))
+
+(define (branch-structure branch)
+  (cdr branch))
 
