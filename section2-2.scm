@@ -447,3 +447,10 @@
   (accumulate +
               0
               (map (lambda (x) 1) (enumerate-tree t))))
+
+;;; Exercise 2.36
+(define (accumulate-n op init seqs)
+  (if (null? (car seqs))
+      `()
+      (cons (accumulate op init (map (lambda (seq) (car seq)) seqs))
+            (accumulate-n op init (map (lambda (seq) (cdr seq)) seqs)))))
