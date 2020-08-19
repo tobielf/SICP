@@ -436,3 +436,9 @@
 (define (length sequence)
   (accumulate (lambda (x y) (+ y 1)) 0 sequence))
 
+;;; Exercise 2.34
+(define (horner-eval x coefficient-sequence)
+  (accumulate (lambda (this-coeff higher-terms) (+ (* higher-terms x) this-coeff))
+              0
+              coefficient-sequence))
+
