@@ -468,3 +468,12 @@
 (define (matrix-*-matrix m n)
   (let ((cols (transpose n)))
       (map (lambda (row) (matrix-*-vector cols row)) m)))
+
+;;; Exercise 2.38
+(define (fold-left op initial sequence)
+  (define (iter result rest)
+    (if (null? rest)
+        result
+        (iter (op result (car rest)) (cdr rest))))
+  (iter initial sequence))
+; Associative property, like '+', '*', 'set union', 'set intersection'.
