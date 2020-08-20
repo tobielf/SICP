@@ -95,7 +95,7 @@
       (cons (* (car items) factor)
             (scale-list (cdr items) factor))))
 
-(define (map proc items)
+(define (map* proc items)
   (if (null? items)
       items
       (cons (proc (car items))
@@ -427,7 +427,7 @@
                    (filter odd? sequence))))
 
 ;;; Exercise 2.33
-(define (map p sequence)
+(define (map* p sequence)
   (accumulate (lambda (x y) (cons (p x) y)) `() sequence))
 
 (define (append seq1 seq2)
@@ -454,3 +454,17 @@
       `()
       (cons (accumulate op init (map (lambda (seq) (car seq)) seqs))
             (accumulate-n op init (map (lambda (seq) (cdr seq)) seqs)))))
+
+;;; Exercise 2.37
+(define (dot-product v w)
+  (accumulate + 0 (map * v w)))
+
+(define (matrix-*-vector m v)
+  (map (lambda (mi) (dot-product mi v)) m))
+
+(define (transpose mat)
+  (accumulate-n cons `() mat))
+
+(define (matrix-*-matrix m n)
+  (let ((cols (transpose n)))
+      (map (lambda (row) (matrix-*-vector cols row)) m)))
