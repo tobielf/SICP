@@ -476,4 +476,14 @@
         result
         (iter (op result (car rest)) (cdr rest))))
   (iter initial sequence))
+
+(define (fold-right op initial sequence)
+  (accumulate op initial sequence))
 ; Associative property, like '+', '*', 'set union', 'set intersection'.
+
+;;; Exercise 2.39
+(define (reverse sequence)
+  (fold-right (lambda (x y) (append y (list x))) `() sequence))
+
+(define (reverse sequence)
+  (fold-left (lambda (x y) (cons y x)) `() sequence))
