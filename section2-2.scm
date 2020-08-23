@@ -529,3 +529,16 @@
   (map make-pair-sum
        (filter prime-sum?
                (unique-pairs n))))
+
+;;; Exercise 2.41
+(define (unique-triples n)
+  (flatmap (lambda (k)
+             (map (lambda (pairs) (cons k pairs))
+             (unique-pairs (- k 1))))
+           (enumerate-interval 3 n)))
+
+(define (sum-up-to? s)
+  (lambda (pair) (= s (accumulate + 0 pair))))
+
+(define (triples-sum-up-to s n)
+  (filter (sum-up-to? s) (unique-triples n)))
