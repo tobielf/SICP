@@ -571,3 +571,12 @@
              (not (= (car (car positions)) (car new-row))) ; check row
              (safe-row (- k 1) (cdr positions) new-row))))
   (safe-row (- k 1) (cdr positions) (car positions)))
+
+;;; Exercise 2.43
+;  (n - 1)! T times slower, since the recursive call happens multiple times.
+;(flatmap
+;  (lambda (new-row)
+;    (map (lambda (rest-of-queens)
+;            (adjoin-position new-row k rest-of-queens))
+;         (queen-cols (- k 1))))
+;  (enumerate-interval 1 board-size))
