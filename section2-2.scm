@@ -629,3 +629,16 @@
   (let ((combine4 (square-of-four flip-horiz identity
                                   rotate180 flip-vert)))
     (combine4 (corner-split painter n))))
+
+;;; Exercise 2.45
+(define (split op-to-origi op-to-small)
+  (define (func painter n)
+    (if (= n 0)
+        painter
+        (let ((smaller (func painter (- n 1))))
+          (op-to-origi painter (op-to-small smaller smaller)))))
+  func)
+
+(define right-split (split beside below))
+
+(define up-split (split below beside))
