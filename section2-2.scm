@@ -542,3 +542,32 @@
 
 (define (triples-sum-up-to s n)
   (filter (sum-up-to? s) (unique-triples n)))
+
+;;; Exercise 2.42
+(define (queens board-size)
+  (define (queen-cols k)
+    (if (= k 0)
+        (list empty-board)
+        (filter
+          (lambda (positions) (safe? k positions))
+          (flatmap
+            (lambda (rest-of-queens)
+              (map (lambda (new-row)
+                      (adjoin-position new-row k rest-of-queens))
+                   (enumerate-interval 1 board-size)))
+            (queen-cols (- k 1))))))
+  (queen-cols board-size))
+
+(define (adjoin-position new-row k rest-of-queens)
+  (cons (list new-row k) rest-of-queens))
+
+(define empty-board `())
+
+(define (safe? k positions)
+  (define (safe-row k positions new-row)
+    (if (= k 0)
+        #t
+        (and (not (= (abs (- (car (car positions)) (car new-row))) (abs (- (cadr (car positions)) (cadr new-row))))) ; check diagonal
+             (not (= (car (car positions)) (car new-row))) ; check row
+             (safe-row (- k 1) (cdr positions) new-row))))
+  (safe-row (- k 1) (cdr positions) (car positions)))
