@@ -714,6 +714,9 @@
 (define (end-segment segment)
   (cadr segment))
 
+;;; Exercise 2.49
+; ToDo
+
 (define (transform-painter painter origin corner1 corner2)
   (lambda (frame) 
     (let ((m (frame-coord-map frame)))
@@ -735,6 +738,9 @@
                      (make-vect 1.0 0.0)
                      (make-vect 0.0 0.0)
                      (make-vect 1.0 1.0)))
+
+(define (rotate180 painter)
+  (compose flip-vert flip-horiz))  ; from exercise 1.42
 
 (define (shrink-to-upper-right painter)
   (transform-painter painter
@@ -798,3 +804,6 @@
 (define right-split (split beside below))
 
 (define up-split (split below beside))
+
+;;; Exercise 2.52
+; ToDo
