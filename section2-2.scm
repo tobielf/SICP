@@ -639,10 +639,6 @@
           (op-to-origi painter (op-to-small smaller smaller)))))
   func)
 
-(define right-split (split beside below))
-
-(define up-split (split below beside))
-
 (define (frame-coord-map frame)
   (lambda (v) 
     (add-vect
@@ -798,3 +794,7 @@
       (lambda (frame)
         (paint-top frame)
         (paint-bottom frame)))))
+
+(define right-split (split beside below))
+
+(define up-split (split below beside))
