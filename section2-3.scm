@@ -35,3 +35,7 @@
 (equal?* `(this) `(this is))
 (equal?* `(this is a list) `(this is a list))
 (equal?* `(this is a list) `(this (is a) list))
+
+;;; Exercise 2.55
+(car ''abracadabra)
+; The second quote has been treated as the object after the first quote.
