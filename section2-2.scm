@@ -708,3 +708,12 @@
           ((frame-coord-map frame) (end-segment segment))))
     segment-list)))
 
+;;; Exercise 2.48
+(define (make-segment start end)
+  (list start end))
+
+(define (start-segment segment)
+  (car segment))
+
+(define (end-segment segment)
+  (cadr segment))
