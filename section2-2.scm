@@ -733,6 +733,13 @@
                      (make-vect 1.0 1.0)   ; new end of edge1
                      (make-vect 0.0 0.0))) ; new end of edge2
 
+;;; Exercise 2.50
+(define (flip-horiz painter)
+  (transform-painter painter
+                     (make-vect 1.0 0.0)
+                     (make-vect 0.0 0.0)
+                     (make-vect 1.0 1.0)))
+
 (define (shrink-to-upper-right painter)
   (transform-painter painter
                      (make-vect 0.5 0.5)
@@ -744,6 +751,18 @@
                      (make-vect 1.0 0.0)
                      (make-vect 1.0 1.0)
                      (make-vect 0.0 0.0)))
+
+(define (rotate180 painter)
+  (transform-painter painter
+                     (make-vect 1.0 1.0)
+                     (make-vect 0.0 1.0)
+                     (make-vect 1.0 0.0)))
+
+(define (rotate270 painter)
+  (transform-painter painter
+                     (make-vect 0.0 1.0)
+                     (make-vect 0.0 0.0)
+                     (make-vect 1.0 1.0)))
 
 (define (squash-inwards painter)
   (transform-painter painter
