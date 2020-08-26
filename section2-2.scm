@@ -652,3 +652,25 @@
               (scale-vect (ycor-vect v)
                           (edge2-frame frame))))))
 
+;;; Exercise 2.46
+(define (make-vect x y)
+  (list x y))
+
+(define (xcor-vect v)
+  (car v))
+
+(define (ycor-vect v)
+  (cadr v))
+
+(define (add-vect u v)
+  (make-vect (+ (xcor-vect u) (xcor-vect v))
+             (+ (ycor-vect u) (ycor-vect v))))
+
+(define (sub-vect u v)
+  (make-vect (- (xcor-vect u) (xcor-vect v))
+             (- (ycor-vect u) (ycor-vect v))))
+
+(define (scale-vect v s)
+  (make-vect (* (xcor-vect v) s) 
+             (* (ycor-vect v) s)))
+
