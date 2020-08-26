@@ -25,3 +25,13 @@
 (memq `red `(red shoes blue socks))
 ;Value: (red shoes blue socks)
 
+;;; Exercise 2.54
+(define (equal?* l1 l2)
+  (cond ((and (null? l1) (null? l2)) #t)
+        ((or (null? l1) (null? l2)) #f)
+        ((not (eq? (car l1) (car l2))) #f)
+        (else (equal?* (cdr l1) (cdr l2)))))
+
+(equal?* `(this) `(this is))
+(equal?* `(this is a list) `(this is a list))
+(equal?* `(this is a list) `(this (is a) list))
