@@ -287,3 +287,34 @@
 
 (adjoin-set 4 '(1 2 3))
 ;Value: (1 2 3 4)
+
+;;; Exercise 2.62
+; O(n) complexity.
+(define (union-set set1 set2)
+  (cond ((null? set1) set2)
+        ((null? set2) set1)
+        (else (let ((x1 (car set1)) (x2 (car set2)))
+            (cond ((= x1 x2) (cons x1 (union-set (cdr set1) (cdr set2))))
+                  ((< x1 x2) (cons x1 (union-set (cdr set1) set2)))
+                  ((< x2 x1) (cons x2 (union-set set1 (cdr set2)))))))))
+
+(union-set '() '())
+;Value: ()
+
+(union-set '(1) '())
+;Value: (1)
+
+(union-set '() '(2))
+;Value: (2)
+
+(union-set '(1 2) '(3 4))
+;Value: (1 3 2 4)
+
+(union-set '(1 2) '(1 2))
+;Value: (1 2)
+
+(union-set '(1 2 3 4) '(2 3))
+;Value: (1 2 3 4)
+
+(union-set '(2 3) '(1 2 3 4))
+;Value: (1 2 3 4)
