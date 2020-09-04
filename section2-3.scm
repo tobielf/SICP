@@ -135,3 +135,33 @@
                                      (deriv (base exp) var))))
         (else (error "unknown expression type -- DERIV" exp))))
 
+;;; Exercise 2.57
+(define (make-arbitrary-sum a1 . rest)
+  (if (> (length rest) 1)
+      (cons '+ (cons a1 rest))
+      (let ((a2 (car rest)))
+      (make-sum a1 a2))))
+
+(define (addend s) (cadr s))
+
+(define (augend s)
+  (if (= (length (cddr s)) 1)
+    (caddr s)
+    (cons (car s) (cddr s))))
+
+(define (make-arbitrary-product m1 . rest)
+  (if (> (length rest) 1)
+      (cons '* (cons m1 rest))
+      (let ((m2 (car rest)))
+      (make-product m1 m2))))
+
+(define (multiplier p) (cadr p))
+
+(define (multiplicand p)
+  (if (= (length (cddr p)) 1)
+    (caddr p)
+    (cons (car p) (cddr p))))
+
+
+(deriv '(* x y (+ x 3)) 'x)
+(deriv (make-arbitrary-product 'x 'y (make-arbitrary-sum 'x 3)) 'x)
