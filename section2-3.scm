@@ -264,3 +264,26 @@
                 (intersection-set (cdr set1) set2))
               ((< x2 x1) 
                 (intersection-set set1 (cdr set2)))))))
+
+;;; Exercise 2.61
+; O(n) complexity, but requires on average about half as many steps as unordered one.
+(define (adjoin-set x set)
+  (cond ((null? set) (cons x set))
+        ((= x (car set)) set)
+        ((< x (car set)) (cons x set))
+        (else (cons (car set) (adjoin-set x (cdr set))))))
+
+(adjoin-set 1 '())
+;Value: (1)
+
+(adjoin-set 1 '(1 2))
+;Value: (1 2)
+
+(adjoin-set 3 '(1 2 3))
+;Value: (1 2 3)
+
+(adjoin-set 2 '(1 3 4))
+;Value: (1 2 3 4)
+
+(adjoin-set 4 '(1 2 3))
+;Value: (1 2 3 4)
