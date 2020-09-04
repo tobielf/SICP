@@ -487,3 +487,30 @@
         ((equal? given-key (key (car set-of-records))) 
          (car set-of-records))
         (else (lookup given-key (cdr set-of-records)))))
+
+;;; Exercise 2.66
+(define (lookup given-key set-of-records)
+  (cond ((null? set-of-records) #f)
+        ((= given-key (key (entry set-of-records))) (value (entry set-of-records)))
+        ((< given-key (key (entry set-of-records))) (lookup given-key (left-branch set-of-records)))
+        ((> given-key (key (entry set-of-records))) (lookup given-key (right-branch set-of-records)))))
+
+(define db (make-tree (make-record 3 'Hello) (make-tree (make-record 1 'World) '() '()) (make-tree (make-record 5 'Foo) '() '())))
+
+(lookup 1 db)
+;Value: world
+
+(lookup 2 db)
+;Value: #f
+
+(lookup 3 db)
+;Value: hello
+
+(lookup 4 db)
+;Value: #f
+
+(lookup 5 db)
+;Value: foo
+
+(lookup 6 db)
+;Value: #f
