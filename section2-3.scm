@@ -586,3 +586,34 @@
 
 (decode sample-message sample-tree)
 ;Value: (a d a b b c a)
+
+;;; Exercise 2.68
+(define (encode message tree)
+  (if (null? message)
+      `()
+      (append (encode-symbol (car message) tree)
+              (encode (cdr message) tree))))
+
+; Taken from representing sets as unordered lists. (element-of-set?)
+(define (element-of-list? x list)
+  (cond ((null? list) #f)
+        ((equal? x (car list)) #t)
+        (else (element-of-list? x (cdr list)))))
+
+(define (select-branch x branch)
+  (cond ((element-of-list? x (symbols (left-branch branch))) (list (left-branch branch) 0))
+        ((element-of-list? x (symbols (right-branch branch))) (list (right-branch branch) 1))
+        (else (error "bad symbol -- SELECT-BRANCH" x))))
+
+(define (encode-symbol symbol tree)
+  (define (encode1 branch)
+    (let ((next-selection (select-branch symbol branch)))
+      (let ((next-branch (car next-selection))
+            (next-encoding (cadr next-selection)))
+        (if (leaf? next-branch)
+          (list next-encoding)
+          (cons next-encoding (encode1 next-branch))))))
+  (encode1 tree))
+
+(encode '(a d a b b c a) sample-tree)
+;Value: (0 1 1 0 0 1 0 1 0 1 1 1 0)
