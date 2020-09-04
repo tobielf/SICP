@@ -435,3 +435,43 @@
 
 ; b. Time complexity?
 ; T(n) = 2 * T(n/2) + O(1) ==> O(n)
+
+;;; Exercise 2.65
+; rename union-set (ordered list implementation) as merge-ordered-list
+(define (merge-ordered-list list1 list2)
+  (cond ((null? list1) list2)
+        ((null? list2) list1)
+        (else (let ((x1 (car list1)) (x2 (car list2)))
+            (cond ((= x1 x2) (cons x1 (merge-ordered-list (cdr list1) (cdr list2))))
+                  ((< x1 x2) (cons x1 (merge-ordered-list (cdr list1) list2)))
+                  ((< x2 x1) (cons x2 (merge-ordered-list list1 (cdr list2)))))))))
+
+; rename intersection-set (ordered list implementation) as diff-ordered-list
+(define (diff-ordered-list list1 list2)
+  (if (or (null? list1) (null? list2))
+      `()
+      (let ((x1 (car list1)) (x2 (car list2)))
+        (cond ((= x1 x2) 
+                (cons x1 
+                      (diff-ordered-list (cdr list1)
+                                        (cdr list2))))
+              ((< x1 x2) 
+                (diff-ordered-list (cdr list1) list2))
+              ((< x2 x1) 
+                (diff-ordered-list list1 (cdr list2)))))))
+
+; O(n) complexity.
+(define (tree->list elements)
+  (tree->list-2 elements))
+
+; O(n) complexity.
+(define (union-set set1 set2)
+  (let ((list1 (tree->list set1))   ; O(n)
+        (list2 (tree->list set2)))  ; O(n)
+    (list->tree (merge-ordered-list list1 list2))))  ; O(n) + O(n)
+
+; O(n) complexity.
+(define (intersection-set set1 set2)
+  (let ((list1 (tree->list set1))   ; O(n)
+        (list2 (tree->list set2)))  ; O(n)
+    (list->tree (diff-ordered-list list1 list2))))   ; O(n) + O(n)
