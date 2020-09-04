@@ -475,3 +475,15 @@
   (let ((list1 (tree->list set1))   ; O(n)
         (list2 (tree->list set2)))  ; O(n)
     (list->tree (diff-ordered-list list1 list2))))   ; O(n) + O(n)
+
+(define (make-record key value) (cons key value))
+
+(define (key record) (car record))
+
+(define (value record) (cdr record))
+
+(define (lookup given-key set-of-records)
+  (cond ((null? set-of-records) #f)
+        ((equal? given-key (key (car set-of-records))) 
+         (car set-of-records))
+        (else (lookup given-key (cdr set-of-records)))))
