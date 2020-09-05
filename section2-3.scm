@@ -630,3 +630,22 @@
                                     (cddr leaf-set)))))
 
 (generate-huffman-tree '((A 4) (B 2) (C 1) (D 1)))
+
+;;; Exercise 2.70
+(define tree2-70 (generate-huffman-tree '((NA 16) (YIP 9) (SHA 3) (A 2) (GET 2) (JOB 2) (BOOM 1) (WAH 1))))
+
+(define message2-70 '(get a job
+sha na na na na na na na na
+get a job
+sha na na na na na na na na
+wah yip yip yip yip yip yip yip yip yip
+sha boom))
+
+(length (encode message2-70 tree2-70))
+;Value: 84
+
+(encode message2-70 tree2-70)
+
+; Fixed-length for eight symbols required 3 bits for each symbol. So the minimal will be
+(* (length message2-70) 3)
+;Value: 108
