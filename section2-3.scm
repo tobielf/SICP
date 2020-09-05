@@ -649,3 +649,7 @@ sha boom))
 ; Fixed-length for eight symbols required 3 bits for each symbol. So the minimal will be
 (* (length message2-70) 3)
 ;Value: 108
+
+;;; Exercise 2.71
+; 1 bit for most frequent symbol, (n - 1) bits for least frequent symbol.
+; The tree in this case is completely unbalanced.
