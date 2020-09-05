@@ -562,7 +562,7 @@
 
 (define (adjoin-set x set)
   (cond ((null? set) (list x))
-        ((< (weight x) (weight (car x))) (cons x set))
+        ((< (weight x) (weight (car set))) (cons x set))
         (else (cons (car set)
                     (adjoin-set x (cdr set))))))
 
@@ -617,3 +617,16 @@
 
 (encode '(a d a b b c a) sample-tree)
 ;Value: (0 1 1 0 0 1 0 1 0 1 1 1 0)
+
+;;; Exercise 2.69
+(define (generate-huffman-tree pairs)
+  (successive-merge (make-leaf-set pairs)))
+
+(define (successive-merge leaf-set)
+  (if (= (length leaf-set) 1)
+      (car leaf-set)
+      (successive-merge (adjoin-set (make-code-tree (car leaf-set) 
+                                                    (cadr leaf-set)) 
+                                    (cddr leaf-set)))))
+
+(generate-huffman-tree '((A 4) (B 2) (C 1) (D 1)))
