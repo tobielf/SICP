@@ -653,3 +653,8 @@ sha boom))
 ;;; Exercise 2.71
 ; 1 bit for most frequent symbol, (n - 1) bits for least frequent symbol.
 ; The tree in this case is completely unbalanced.
+
+;;; Exercise 2.72
+; Ideally, the algorithm in 2.68 reduce the symbol to lookup by half at each level.
+; for average case, T(n) = 2* T(n/2) + O(1) ==> O(n)
+; for unbalanced case in 2.71, T(n) = T(n - 1) + O(1) ==> O(n^2)
