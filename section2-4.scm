@@ -233,3 +233,63 @@
 ;d. if we change to get ((get 'deriv (operator exp)) (operands exp) var)))
 ;   we only need to change the corresponding (put '* 'deriv)
 
+;;; Exercise 2.74, operation-type tables
+;                          Divisions
+;                Div1    |    Div2    |    Div3
+;===================================================
+;o
+;p  get-record |
+;e ------------
+;r  get-salary |
+;a ------------
+;t  find-empl- |
+;i  oyee-record|
+;o
+;o
+;s
+
+(define div1-file (attach-tag 'div1 (list (cons 'John (list '100-blvd '$15000/mo)))))
+(define (install-div1-file-format)
+  (define (make-employee name record)
+    (cons name record))
+  (define (name employee)
+    (car employee))
+  (define (record employee)
+    (cdr employee))
+  (define (make-record address salary)
+    (list address salary))
+  (define (address record)
+    (car record))
+  (define (salary record)
+    (cadr record))
+  (define (get-record name file)
+    (cond ((null? file) #f)
+          ((equal? name (name (car file))) (record (car file)))
+          (else (get-record name (cdr file)))))
+  (define (add-employee employee file)
+    (cons employee file))
+  (define (tag x) (attach-tag 'div1 x))
+  (put 'get-record 'div1 
+      (lambda (name file) (tag (get-record name file))))
+  (put 'get-salary 'div1
+      (lambda (record) (tag (salary record))))
+  'done)
+(define div2-file (attach-tag 'div2 (list (list 'King (cons '200-ave '$12000/mo)))))
+
+;a.
+(define (get-record employee-name file)
+  ((get 'get-record (type-tag file)) employee-name (contents file)))
+
+;b.
+(define (get-salary employee-record)
+  ((get 'get-salary (type-tag employee-record)) (contents employee-record)))
+
+;c.
+(define (find-employee-record employee-name files)
+  (map (lambda (file) (get-record employee-name file)) files))
+
+;d. A new division adding to the central system, we only need to wrap all operations
+;   within an "install" procedure, assign a new data-tag to it, and register all 
+;   operations with new data-tag to the table.
+;   We don't need to change the central system.
+
