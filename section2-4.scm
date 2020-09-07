@@ -143,3 +143,93 @@
 (define (make-from-mag-ang r a)
   ((get 'make-from-mag-ang 'polar r a)))
 
+;;; Exercise 2.73
+(define (variable? x) (symbol? x))
+
+(define (same-variable? v1 v2)
+  (and (variable? v1) (variable? v2) (eq? v1 v2)))
+
+(define (=number? exp num)
+  (and (number? exp) (= exp num)))
+
+(define (deriv exp var)
+  (cond ((number? exp) 0)
+        ((variable? exp) (if (same-variable? exp var) 1 0))
+        (else ((get 'deriv (operator exp)) (operands exp) 
+                                           var))))
+
+(define (operator exp) (car exp))
+(define (operands exp) (cdr exp))
+
+;a. We can't assimilate number? and variable? into the data-directed dispatch
+;   since they are generic operation for all of the 'operator(s)
+
+;b.
+(define (install-sum-package)
+  ;; internal procedures
+  (define (make-sum a1 a2)
+    (cond ((=number? a1 0) a2)
+          ((=number? a2 0) a1)
+          ((and (number? a1) (number? a2)) (+ a1 a2))
+          (else (cons a1 a2))))
+  (define (addend s) (car s))
+  (define (augend s) (cdr s))
+  (define (deriv-sum exp var)
+    (make-sum (deriv (addend exp) var)
+              (deriv (augend exp) var)))
+  ;; interface to the rest of the system
+  (define (tag x) (attach-tag '+ x))
+  (put 'deriv '+ 
+      (lambda (exp var) (tag (deriv-sum exp var))))
+  (put 'make-sum '+
+      (lambda (a1 a2) (tag (make-sum a1 a2))))
+  'done)
+
+(define (install-product-package)
+  ;; internal procedures
+  (define (make-product m1 m2)
+    (cond ((or (=number? m1 0) (=number m2 0)) 0)
+          ((=number? m1 1) m2)
+          ((=number? m2 1) m1)
+          ((and (number? m1) (number? m2)) (* m1 m2))
+          (else (cons m1 m2))))
+  (define (multiplier p) (car p))
+  (define (multiplicand p) (cdr p))
+  (define (deriv-product exp var)
+    ((get 'make-sum '+)
+      (make-product (multiplier exp)
+                    (deriv (multiplicand exp) var))
+      (make-product (deriv (multiplier exp) var)
+                    (multiplicand exp))))
+  ;; interface to the rest of the system
+  (define (tag x) (attach-tag '* x))
+  (put 'deriv '*
+      (lambda (exp var) (tag (deriv-product exp var))))
+  (put 'make-product '*
+      (lambda (m1 m2) (tag (make-product m1 m2))))
+  'done)
+
+;c.
+(define (install-exponent-package)
+  ;; internal procedures
+  (define (make-exponentiation b exp)
+    (cond ((=number? exp 0) 1)
+          ((=number? exp 1) b)
+          (else (cons b exp))))
+  (define (base e) (car e))
+  (define (exponent e) (cdr e))
+  (define (deriv-exponent exp var)
+    ((get 'make-product '*) (exponent exp)
+                            ((get 'make-product '*) (make-exponentiation (base exp) (- (exponent exp) 1))
+                                                    (deriv (base exp) var))))
+  ;; interface to the rest of the system
+  (define (tag x) (attach-tag '** x))
+  (put 'deriv '**
+      (lambda (exp var) (tag (deriv-exponent exp var))))
+  (put 'make-exponentiation '**
+      (lambda (b exp) (tag (make-exponentiation b exp))))
+  'done)
+
+;d. if we change to get ((get 'deriv (operator exp)) (operands exp) var)))
+;   we only need to change the corresponding (put '* 'deriv)
+
