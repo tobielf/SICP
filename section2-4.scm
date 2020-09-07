@@ -316,3 +316,19 @@
           (else
             (error "Unknown op -- MAKE-FROM-MAG-ANG" op))))
   dispatch)
+
+;;; Exercise 2.76
+; Adding new types of data objects or new operations.
+; 1. Explicit dispatch, has two issues. Firstly, same operation on different 
+;    data types will have name conflict; Secondly, adding new operation need to
+;    add a new clause to the "cond" branch.
+; 2. Data-directed style, would be the most appropriate for a system in which
+;    new operations must often be added, but the data types are fixed.
+;    (Some operation entry on old data type could be null pointer.)
+;    The high level changes on new operation is the same as adding new clause in
+;    case 1.
+; 3. Message-passing style, would be the most appropriate for a system in which
+;    new types must often be added, but the operations are fixed.
+;    (Interface contract.)
+;(define (apply-generic op arg) (arg op))
+;    One limitation is it permits only generic procedures of one argument.    
