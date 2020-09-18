@@ -53,6 +53,8 @@
 
 ;;; Exercise 3.3
 (define (make-account balance password)
+  ;;; Exercise 3.4
+  (define retries 0)
   (define (withdraw amount)
     (if (>= balance amount)
         (begin (set! balance (- balance amount))
@@ -62,9 +64,15 @@
     (set! balance (+ balance amount))
     balance)
   (define (dispatch pw m)
-    (if (eq? password pw)
-      (cond ((eq? m 'withdraw) withdraw)
-            ((eq? m 'deposit) deposit)
-            (else (error "Unknown request -- MAKE-ACCOUNT" m)))
-      (lambda (n) "Incorrect password")))
+    (if (and (eq? password pw) (< retries 7))
+      (begin (set! retries 0)
+        (cond ((eq? m 'withdraw) withdraw)
+              ((eq? m 'deposit) deposit)
+              (else (error "Unknown request -- MAKE-ACCOUNT" m))))
+      (lambda (n) 
+        (if (< retries 7)
+            (begin (set! retries (+ retries 1))
+                    "Incorrect password")
+            "call-the-cops"))))
   dispatch)
+
