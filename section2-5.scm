@@ -100,3 +100,12 @@
 
 (define (make-complex-from-mag-ang r a)
   ((get 'make-from-mag-ang 'complex) r a))
+
+;;; Exercise 2.77
+(put 'real-part '(complex) real-part)
+(put 'imag-part '(complex) imag-part)
+(put 'magnitude '(complex) magnitude)
+(put 'angle '(complex) angle)
+; 'apply-generic' invoked twice, first with the complex data type we defined above
+; Then with the rectangular data type we defined in section 2.4
+
