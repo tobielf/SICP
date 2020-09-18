@@ -18,6 +18,9 @@
   ;;; Exercise 2.79
   (put 'eq '(scheme-number scheme-number)
         (lambda (x y) (eq? x y)))
+  ;;; Exercise 2.80
+  (put '=zero? '(scheme-number)
+        (lambda (x) (= x 0)))
   (put 'make 'scheme-number
         (lambda (x) (tag x)))
   'done)
@@ -50,6 +53,8 @@
   (define (equal-rat? x y)
     (= (* (numer x) (denom y))
        (* (numer y) (denom x))))
+  ;;; Exercise 2.80
+  (define (=zero? x) (= (numer x) 0))
   ;; interface to rest of the system
   (define (tag x) (attach-tag 'rational x))
   (put 'add '(rational rational)
@@ -62,6 +67,8 @@
         (lambda (x y) (tag (div-rat x y))))
   (put 'eq '(rational rational)
         (lambda (x y) (equal-rat? x y)))
+  (put '=zero? '(rational)
+        (lambda (x) (=zero? x)))
   (put 'make 'rational
         (lambda (n d) (tag (make-rat n d))))
   'done)
@@ -92,6 +99,8 @@
   (define (equal-complex? z1 z2)
     (and (= (real-part z1) (real-part z2))
          (= (imag-part z1) (imag-part z2))))
+  ;;; Exercise 2.80
+  (define (=zero? z) (= (real-part z) (imag-part z) 0))
   ;; interface to rest of the system
   (define (tag z) (attach-tag 'complex z))
   (put 'add '(complex complex)
@@ -104,6 +113,8 @@
         (lambda (z1 z2) (tag (div-complex z1 z2))))
   (put 'eq '(complex complex)
         (lambda (z1 z2) (equal-complex? z1 z2)))
+  (put '=zero? '(complex)
+        (lambda (z) (=zero? z)))
   (put 'make-from-real-imag 'complex
         (lambda (x y) (tag (make-from-real-imag x y))))
   (put 'make-from-mag-ang 'complex
@@ -143,3 +154,7 @@
 ;;; Exercise 2.79
 (define (equ? n1 n2)
   (apply-generic 'eq n1 n2))
+
+;;; Exercise 2.80
+(define (=zero? number)
+  (apply-generic '=zero? number))
