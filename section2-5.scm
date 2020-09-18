@@ -102,10 +102,25 @@
   ((get 'make-from-mag-ang 'complex) r a))
 
 ;;; Exercise 2.77
-(put 'real-part '(complex) real-part)
-(put 'imag-part '(complex) imag-part)
-(put 'magnitude '(complex) magnitude)
-(put 'angle '(complex) angle)
+;(put 'real-part '(complex) real-part)
+;(put 'imag-part '(complex) imag-part)
+;(put 'magnitude '(complex) magnitude)
+;(put 'angle '(complex) angle)
 ; 'apply-generic' invoked twice, first with the complex data type we defined above
 ; Then with the rectangular data type we defined in section 2.4
 
+;;; Exercise 2.78
+(define (attach-tag type-tag contents)
+  (if (pair? contents)
+      (cons type-tag contents)
+      contents))
+(define (type-tag datum)
+  (cond ((number? datum) )
+        ((symbol? datum) )
+        ((pair? datum) (car datum))
+        (else (error "Bad tagged datum -- TYPE-TAG" datum))))
+(define (contents datum)
+  (cond ((number? datum) datum)
+        ((symbol? datum) datum)
+        ((pair? datum) (cdr datum))
+        (else (error "Bad tagged datum -- CONTENTS" datum))))
