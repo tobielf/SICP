@@ -119,6 +119,10 @@
         (lambda (x y) (tag (make-from-real-imag x y))))
   (put 'make-from-mag-ang 'complex
         (lambda (r a) (tag (make-from-mag-ang r a))))
+  ;;; coercion for different types.
+  (define (scheme-number->complex n)
+    (make-complex-from-real-imag (contents n) 0))
+  (put-coercion 'scheme-number 'complex scheme-number->complex)
   'done)
 
 (define (make-complex-from-real-imag x y)
@@ -158,3 +162,27 @@
 ;;; Exercise 2.80
 (define (=zero? number)
   (apply-generic '=zero? number))
+
+(define (apply-generic op . args)
+  (let ((type-tags (map type-tag args)))
+    (let ((proc (get op type-tags)))
+      (if proc
+          (apply proc (map contents args))
+          (if (= (length args) 2)
+              (let ((type1 (car type-tags))
+                    (type2 (cadr type-tags))
+                    (a1 (car args))
+                    (a2 (cadr args)))
+                (let ((t1->t2 (get-coercion type1 type2))
+                      (t2->t1 (get-coercion type2 type1)))
+                  (cond (t1->t2 
+                          (apply-generic op (t1->t2 a1) a2))
+                        (t2->t1 
+                          (apply-generic op a1 (t2->t1 a2)))
+                        (else
+                          (error "No method for these types"
+                                 (list op type-tags))))))
+              (error "No method for these types"
+                     (list op type-tags)))))))
+
+
