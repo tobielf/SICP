@@ -15,6 +15,9 @@
         (lambda (x y) (tag (* x y))))
   (put 'div '(scheme-number scheme-number)
         (lambda (x y) (tag (/ x y))))
+  ;;; Exercise 2.79
+  (put 'eq '(scheme-number scheme-number)
+        (lambda (x y) (eq? x y)))
   (put 'make 'scheme-number
         (lambda (x) (tag x)))
   'done)
@@ -43,6 +46,10 @@
   (define (div-rat x y)
     (make-rat (* (numer x) (denom y))
               (* (denom x) (numer y))))
+  ;;; Exercise 2.79
+  (define (equal-rat? x y)
+    (= (* (numer x) (denom y))
+       (* (numer y) (denom x))))
   ;; interface to rest of the system
   (define (tag x) (attach-tag 'rational x))
   (put 'add '(rational rational)
@@ -53,6 +60,8 @@
         (lambda (x y) (tag (mul-rat x y))))
   (put 'div '(rational rational)
         (lambda (x y) (tag (div-rat x y))))
+  (put 'eq '(rational rational)
+        (lambda (x y) (equal-rat? x y)))
   (put 'make 'rational
         (lambda (n d) (tag (make-rat n d))))
   'done)
@@ -79,6 +88,10 @@
   (define (div-complex z1 z2)
     (make-from-mag-ang (/ (magnitude z1) (magnitude z2))
                        (- (angle z1) (angle z2))))
+  ;;; Exercise 2.79
+  (define (equal-complex? z1 z2)
+    (and (= (real-part z1) (real-part z2))
+         (= (imag-part z1) (imag-part z2))))
   ;; interface to rest of the system
   (define (tag z) (attach-tag 'complex z))
   (put 'add '(complex complex)
@@ -89,6 +102,8 @@
         (lambda (z1 z2) (tag (mul-complex z1 z2))))
   (put 'div '(complex complex)
         (lambda (z1 z2) (tag (div-complex z1 z2))))
+  (put 'eq '(complex complex)
+        (lambda (z1 z2) (equal-complex? z1 z2)))
   (put 'make-from-real-imag 'complex
         (lambda (x y) (tag (make-from-real-imag x y))))
   (put 'make-from-mag-ang 'complex
@@ -115,8 +130,8 @@
       (cons type-tag contents)
       contents))
 (define (type-tag datum)
-  (cond ((number? datum) )
-        ((symbol? datum) )
+  (cond ((number? datum) 'scheme-number)
+        ((symbol? datum) 'scheme-symbol)
         ((pair? datum) (car datum))
         (else (error "Bad tagged datum -- TYPE-TAG" datum))))
 (define (contents datum)
@@ -124,3 +139,7 @@
         ((symbol? datum) datum)
         ((pair? datum) (cdr datum))
         (else (error "Bad tagged datum -- CONTENTS" datum))))
+
+;;; Exercise 2.79
+(define (equ? n1 n2)
+  (apply-generic 'eq n1 n2))
