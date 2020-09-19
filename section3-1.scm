@@ -111,3 +111,13 @@
 
 (define (estimate-integral p x1 x2 y1 y2 trials)
   (* (monte-carlo trials p) (abs (* (- x2 x1) (- y2 y1)))))
+
+;;; Exercise 3.6
+(define (rand-update x) (+ x 1))
+
+(define rand-new 
+  (let ((rand-init 0))
+    (lambda (m)
+      (cond ((eq? m 'reset) (lambda (new-value) (set! rand-init new-value)))
+            ((eq? m 'generate) (set! rand-init (rand-update rand-init)))))
+  ))
