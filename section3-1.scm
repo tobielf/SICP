@@ -91,4 +91,23 @@
           (else (iter (- trials-remaining 1) trials-passed))))
   (iter trials 0))
 
+;;; Exercise 3.5
+(define (random-in-range low high)
+  (let ((range (- high low)))
+    (+ low (random range))))
 
+(define radius 3)
+(define x0 5)
+(define y0 7)
+(define x1 2)
+(define x2 8)
+(define y1 4)
+(define y2 10)
+
+(define (p)
+  (let ((x (random-in-range x1 x2)))
+    (let ((y (random-in-range y1 y2)))
+      (> (square radius) (+ (square (- x x0)) (square (- y y0)))))))
+
+(define (estimate-integral p x1 x2 y1 y2 trials)
+  (* (monte-carlo trials p) (abs (* (- x2 x1) (- y2 y1)))))
