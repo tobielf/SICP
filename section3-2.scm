@@ -79,3 +79,52 @@
 ;                   counter:1       2       3       4       5       6       7
 ;                   max-count:6
 ;    (fact-iter (* counter product) (+ counter 1) max-count)                720                             
+
+;;; Exercise 3.10
+(define (make-withdraw initial-amount)
+  (let ((balance initial-amount))
+      (lambda (amount)
+        (if (>= balance amount)
+            (begin (set! balance (- balance amount)) 
+                   balance)
+            "Insufficient funds"))))
+
+; (let ((<var> <exp>)) <body>)
+; ((lambda (<var>) <body>) <exp>)
+
+;               _____________________________________________________________
+;               |                                                           |
+;global ______\ | make-withdraw--|                                          |
+;env          / |                |                                          |
+;               |________________|__________________________________________|
+;                                |   ^
+;                                |   |
+;                                v   |
+;                               O O--|
+;                       parameter: initial-amount
+;                       body: ((lambda (balance) 
+;                               (lambda (amount)
+;                                 (if (>= balance amount)
+;                                     (begin (set! balance (- balance amount)) 
+;                                            balance)
+;                                     "Insufficient funds"))) 
+;                               initial-amount)
+
+
+;               _____________________________________________________________
+;               | make-withdraw                                             |
+;global ______\ | W2 ---------------------------|                           |
+;env          / | W1 --|                        |                           |
+;               |______|________________________|___________________________|
+;                      |            ^           |            ^
+;                      |            |           |            |
+;                      |  E1 --> balance: 100   |  E2 --> balance: 100
+;                      |            |           |            |
+;                      v            |           v            |
+;                     O O-----------|          O O-----------|
+;                     |                        |
+;                     v                        v
+;           one copy of the code       the other copy of the code
+;
+; The body is not shared.
+
