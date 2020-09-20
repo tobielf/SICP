@@ -53,8 +53,6 @@
 
 ;;; Exercise 3.3
 (define (make-account balance password)
-  ;;; Exercise 3.4
-  (define retries 0)
   (define (withdraw amount)
     (if (>= balance amount)
         (begin (set! balance (- balance amount))
@@ -63,18 +61,22 @@
   (define (deposit amount)
     (set! balance (+ balance amount))
     balance)
-  (define (dispatch pw m)
-    (if (and (eq? password pw) (< retries 7))
-      (begin (set! retries 0)
-        (cond ((eq? m 'withdraw) withdraw)
-              ((eq? m 'deposit) deposit)
-              (else (error "Unknown request -- MAKE-ACCOUNT" m))))
-      (lambda (n) 
-        (if (< retries 7)
-            (begin (set! retries (+ retries 1))
-                    "Incorrect password")
-            "call-the-cops"))))
-  dispatch)
+  (define (access password)
+    ;;; Exercise 3.4
+    (let ((retries 0))
+      (lambda (pw m)
+        (if (and (eq? password pw) (< retries 7))
+          (begin (set! retries 0)
+            (cond ((eq? m 'withdraw) withdraw)
+                  ((eq? m 'deposit) deposit)
+                  ((eq? m 'addtional-access) access)
+                  (else (error "Unknown request" m))))
+          (lambda (n)
+            (if (< retries 7)
+                (begin (set! retries (+ retries 1))
+                       "Incorrect password")
+                "call-the-cops"))))))
+  (access password))
 
 (define rand (lambda () (random 1000)))
 
@@ -121,3 +123,7 @@
       (cond ((eq? m 'reset) (lambda (new-value) (set! rand-init new-value)))
             ((eq? m 'generate) (set! rand-init (rand-update rand-init)))))
   ))
+
+;;; Exercise 3.7
+(define (make-joint acc password new-password)
+  ((acc password 'addtional-access) new-password))
