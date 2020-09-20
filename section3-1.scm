@@ -127,3 +127,9 @@
 ;;; Exercise 3.7
 (define (make-joint acc password new-password)
   ((acc password 'addtional-access) new-password))
+
+;;; Exercise 3.8
+(define f (let ((v 1))
+  (lambda (n) (set! v (* v n)) v)))
+(+ (f 0) (f 1))
+(+ (f 1) (f 0))
