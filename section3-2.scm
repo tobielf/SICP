@@ -128,3 +128,64 @@
 ;
 ; The body is not shared.
 
+;;; Exercise 3.11
+(define (make-account balance)
+  (define (withdraw amount)
+    (if (>= balance amount)
+        (begin (set! balance (- balance amount))
+               balance)
+        "Insufficient funds"))
+  (define (deposit amount)
+    (set! balance (+ balance amount))
+    balance)
+  (define (dispatch m)
+    (cond ((eq? m 'withdraw) withdraw)
+          ((eq? m 'deposit) deposit)
+          (else (error "Unkown request -- MAKE-ACCOUNT"
+                       m))))
+  dispatch)
+
+;               _____________________________________________________________
+;               |                                                           |
+;global ______\ | make-account --|                                          |
+;env          / |                |                                          |
+;               |________________|__________________________________________|
+;                                |   ^
+;                                |   |
+;                                v   |
+;                               O O--|
+;                       parameter: balance
+;                       body: (define (withdraw amount)
+;                               (if (>= balance amount)
+;                                   (begin (set! balance (- balance amount))
+;                                          balance)
+;                                   "Insufficient funds"))
+;                             (define (deposit amount)
+;                               (set! balance (+ balance amount))
+;                               balance)
+;                             (define (dispatch m)
+;                               (cond ((eq? m 'withdraw) withdraw)
+;                                     ((eq? m 'deposit) deposit)
+;                                     (else (error "Unkown request -- MAKE-ACCOUNT"
+;                                                  m))))
+;                             dispatch)
+
+; Each frame of the account will contains their own balance as well as 
+; 'withdraw', 'deposit', 'dispatch' procedures.
+
+;               _____________________________________________________________
+;               | make-account -- ...                                       |
+;global ______\ | acc2 ----------------------|                              |
+;env          / | acc --|                    |                              |
+;               |_______|____________________|______________________________|
+;                        __________________  |       __________________
+;                        | balance: 1000   | |       | balance: 5000   |
+;                 E1 --> | withdraw -->    | |E2 --> | withdraw -->    |
+;                        | deposit  -->    | |       | deposit  -->    |
+;                        | dispatch -->    | |       | dispatch -->    |
+;                        |_________________| |       |_________________|
+;                                            v                ^
+;                                           O O---------------|
+;
+; The only part of environment structure are shared between acc and acc2 is the
+; global environment, 'make-account' procedures.
