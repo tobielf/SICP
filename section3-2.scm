@@ -9,3 +9,73 @@
 
 (define (f a)
   (sum-of-squares (+ a 1) (* a 2)))
+
+;;; Exercise 3.9
+; from section 1.2.1
+(define (factorial n)
+  (if (= n 1)
+      1
+      (* n (factorial (- n 1)))))
+;               _________________________
+;               |                       |
+;global ______\ | factorial --|         |
+;env          / |             |         |
+;               |_____________|_________|
+;                             |   ^
+;                             |   |
+;                             v   |
+;                            O O--|
+;                  parameter: n
+;                  body: (if (= n 1)
+;                          1
+;                          (* n (factorial (- n 1))))
+
+(factorial 6)
+;               _________________________________________________
+;               |                                               |
+;global ______\ |                                               |
+;env          / |                                               |
+;               |_______________________________________________|
+;                  ^       ^       ^       ^       ^       ^
+;                  |       |       |       |       |       |
+;              E1->n:6 E2->n:5 E3->n:4 E4->n:3 E5->n:2 E6->n:1
+;   (* n (factorial (- n 1)))                              1
+
+(define (factorial n)
+  (fact-iter 1 1 n))
+
+(define (fact-iter product counter max-count)
+  (if (> counter max-count)
+      product
+      (fact-iter (* counter product)
+                 (+ counter 1)
+                 max-count)))
+;               _________________________________________________
+;               |                                               |
+;global ______\ | fact-iter -------------------------|          |
+;env          / | factorial --|                      |          |
+;               |_____________|______________________|__________|
+;                             |   ^                  |   ^
+;                             |   |                  |   |
+;                             v   |                  v   |
+;                            O O--|                 O O--|
+;                parameter: n             parameter: product counter max-count
+;                body: (fact-iter 1 1 n)) body:   (if (> counter max-count)
+;                                                   product
+;                                                   (fact-iter (* counter product)
+;                                                              (+ counter 1)
+;                                                              max-count)))
+
+(factorial 6)
+;               _____________________________________________________________
+;               |                                                           |
+;global ______\ |                                                           |
+;env          / |                                                           |
+;               |___________________________________________________________|
+;                 ^       ^       ^       ^       ^       ^       ^       ^
+;                 |       |       |       |       |       |       |       |
+;             E1->n:6 E2->    E3->    E4->    E5->    E6->    E7->    E8->
+;                   product:1       1       2       6       24      120     720
+;                   counter:1       2       3       4       5       6       7
+;                   max-count:6
+;    (fact-iter (* counter product) (+ counter 1) max-count)                720                             
