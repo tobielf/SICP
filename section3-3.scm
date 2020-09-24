@@ -29,3 +29,17 @@
 ;(a b c d)
 ;> (cdr x)
 ;(b c d)
+
+;;; Exercise 3.13
+(define (make-cycle x)
+  (set-cdr! (last-pair x) x)
+  x)
+
+(define z (make-cycle (list 'a 'b 'c)))
+; z -> ['a][*] -> ['b][*] -> ['c][*]
+;       ^                         |
+;       |_________________________|
+
+;(last-pair z)
+; This will fall into endless recursion. Since the pointer pointed back.
+; Got "Exception in last-pair: (a b c a b c ...) is circular" under Chez Scheme.
