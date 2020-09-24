@@ -43,3 +43,45 @@
 ;(last-pair z)
 ; This will fall into endless recursion. Since the pointer pointed back.
 ; Got "Exception in last-pair: (a b c a b c ...) is circular" under Chez Scheme.
+
+;;; Exercise 3.14
+(define (mystery x)
+  (define (loop x y)
+    (if (null? x)
+        y
+        (let ((temp (cdr x)))
+            (set-cdr! x y)
+            (loop temp x))))
+  (loop x '()))
+
+(define v (list 'a 'b 'c 'd))
+; v -> ['a][*] -> ['b][*] -> ['c][*] -> ['d][*] -> nil
+
+(define w (mystery v))
+; loop(x '())
+; v/x -> ['a][*]-> ['b][*] -> ['c][*] -> ['d][*] -> nil
+; y -> nil
+; (let ((temp (cdr x)))
+; temp -> ['b][*] -> ['c][*] -> ['d][*] -> nil  (make a new copy after (cdr x))
+
+;(set-cdr! x y)
+; v/x -> ['a][*]-> nil ['b][*] -> ['c][*] -> ['d][*] -> nil  (this one will be gc)
+
+
+; loop(temp x)
+; x -> ['b][*] -> ['c][*] -> ['d][*] -> nil (temp from last iteration)
+; y -> ['a][*]-> nil (x from last iteration)
+; (let ((temp (cdr x)))
+; temp -> ['c][*] -> ['d][*] -> nil  (make a new copy after (cdr x))
+
+;(set-cdr! x y)
+; x -> ['b][*] -> ['a][*]-> nil 
+
+; repeat until x is '() and the y is:
+; y -> ['d][*] -> ['c][*] -> ['b][*] -> ['a][*]-> nil 
+; However, v only point to one element after calling mystery.
+
+;> w
+;(d c b a)
+;> v
+;(a)
