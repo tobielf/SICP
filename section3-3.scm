@@ -197,3 +197,43 @@
   (if (cddr? l)
       (iter l (cddr l))
       #f))
+
+;;; Exercise 3.20
+(define (cons: x y)
+  (define (set-x! v) (set! x v))
+  (define (set-y! v) (set! y v))
+  (define (dispatch m)
+    (cond ((eq? m 'car) x)
+          ((eq? m 'cdr) y)
+          ((eq? m 'set-car!) set-x!)
+          ((eq? m 'set-cdr!) set-y!)
+          (else (error "Undefined operation -- CONS" m))))
+  dispatch)
+(define (car: z) (z 'car))
+(define (cdr: z) (z 'cdr))
+(define (set-car!: z new-value)
+  ((z 'set-car!) new-value)
+  z)
+(define (set-cdr!: z new-value)
+  ((z 'set-cdr!) new-value)
+  z)
+
+(define x (cons: 1 2))
+(define z (cons: x x))
+(set-car!: (cdr: z) 17)
+(car: x)
+
+;         ____________________________________
+;        | cons: car: cdr:                    |
+; env -> | set-car!: set-cdr!:                |
+;        | z------------------------|         |
+;        | x-----|                  |         |
+;        |_______|__________________|_________|
+;                |      ^           |     ^
+;               _v______|_        __v_____|____ 
+;     E1(x) -> |   x = 1  | E2(z)|  x = E1(x)  |
+;              |   y = 2  |      |  y = E1(x)  |
+;              |  set-x!  |      |   set-x!    |
+;              |  set-y!  |      |   set-y!    |
+;              | dispatch |      |  dispatch   |
+;              |__________|      |_____________|
