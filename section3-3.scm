@@ -262,3 +262,14 @@
         (else 
          (set-front-ptr! queue (cdr (front-ptr queue)))
          queue)))
+
+;;; Exercise 3.21
+(define (print-queue queue)
+  (define (print-list list)
+    (if (null? list)
+        (display ")")
+        (begin (display (car list))
+               (display " ")
+               (print-list (cdr list)))))
+  (display "(")
+  (print-list (front-ptr queue)))
