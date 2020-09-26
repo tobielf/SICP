@@ -182,3 +182,18 @@
                     (traverse (cdr x))))))
   (traverse l)))
 
+;;; Exercise 3.19
+(define (cycle? l)
+  (define (cddr? l)
+    (if (and (not (null? l))
+             (not (null? (cdr l)))
+             (not (null? (cddr l))))
+      (cddr l)
+      #f))
+  (define (iter l ll)
+    (cond ((eq? l ll) #t)
+          ((not (cddr? ll)) #f)
+          (else (iter (cdr l) (cddr ll)))))
+  (if (cddr? l)
+      (iter l (cddr l))
+      #f))
