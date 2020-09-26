@@ -170,3 +170,15 @@
              (count (cdr x))
              1))))
     (count x)))
+
+;;; Exercise 3.18
+(define (cycle? l)
+  (let ((counted '()))
+    (define (traverse x)
+      (cond ((null? x) #f)
+            ((memq (car x) counted) #t)
+            (else (begin 
+                    (set! counted (cons (car x) counted))
+                    (traverse (cdr x))))))
+  (traverse l)))
+
