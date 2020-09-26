@@ -157,3 +157,16 @@
 ;      [a][*] -> [*][/]
 (count-pairs (set-cdr! (list y) x))
 (define z (make-cycle (list 'a 'b 'c)))
+
+;;; Exercise 3.17
+(define (count-pairs x)
+  (let ((counted '()))
+    (define (count x)
+      (if (or (not (pair? x)) (memq x counted))
+        0
+        (begin
+          (set! counted (cons x counted))
+          (+ (count (car x))
+             (count (cdr x))
+             1))))
+    (count x)))
