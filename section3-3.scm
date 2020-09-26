@@ -125,3 +125,35 @@
 ;                 |
 ;                 v
 ;               [wow]
+
+;;; Exercise 3.16
+(define (count-pairs x)
+  (if (not (pair? x))
+      0
+      (+ (count-pairs (car x))
+         (count-pairs (cdr x))
+         1)))
+(define x '(a))
+(define y (cons x x))
+; y -> [x][*] -> [x][*]
+;       |____________|
+;       v
+;      [a][*] -> [*][/]
+(count-pairs (list y))
+; p -> [y][*] -> [*][/]
+;       |
+;       v
+;      [x][*] -> [x][*]
+;       |____________|
+;       v
+;      [a][*] -> [*][/]
+(count-pairs (cons y y))
+; p -> [y][*] -> [y][*]
+;       |____________| 
+;       v
+;      [x][*] -> [x][*]
+;       |____________|
+;       v
+;      [a][*] -> [*][/]
+(count-pairs (set-cdr! (list y) x))
+(define z (make-cycle (list 'a 'b 'c)))
